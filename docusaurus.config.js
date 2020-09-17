@@ -11,7 +11,7 @@ module.exports = {
     navbar: {
       title: 'Reactive Button',
       logo: {
-        alt: 'Reactive Button Logo',
+        alt: 'Logo',
         src: 'img/logo.png',
       },
       items: [
@@ -19,7 +19,7 @@ module.exports = {
           to: 'docs/',
           activeBasePath: 'docs',
           label: 'Docs',
-          position: 'left',
+          position: 'right',
         },
         {
           href: 'https://github.com/arifszn/reactive-button',
@@ -71,7 +71,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://arifszn.github.io">Ariful Alam</a>`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://arifszn.github.io" target="_blank">Ariful Alam</a>`,
     },
   },
   presets: [
@@ -82,7 +82,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/arifszn/reactive-button-doc/edit/master/website/',
+            'https://github.com/arifszn/reactive-button-doc/blob/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

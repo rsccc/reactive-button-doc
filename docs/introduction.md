@@ -1,15 +1,17 @@
 ---
-id: doc1
-title: Style Guide
-sidebar_label: Style Guide
+id: introduction
+title: Introduction
+sidebar_label: Introduction
 slug: /
 ---
 
-You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
+Reactive Button is a beautiful react component to replace the traditional and boring button. Comes with keeping customization on top. Let the users visualize what is happening after button click.
 
-## Markdown Syntax
+## Example
 
-To serve as an example page when styling markdown based Docusaurus sites.
+import Example from '../src/components/Example';
+
+<Example />
 
 ## Headers
 
