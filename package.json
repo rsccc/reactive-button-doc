@@ -13,11 +13,16 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.64",
     "@docusaurus/preset-classic": "2.0.0-alpha.64",
-    "@mdx-js/react": "^1.5.8",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@mdx-js/react": "^1.6.18",
     "clsx": "^1.1.1",
+    "docusaurus-plugin-sass": "^0.1.10",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "reactive-button": "^1.0.15"
+    "react-icons": "^3.11.0",
+    "reactive-button": "^1.1.1"
   },
   "browserslist": {
     "production": [

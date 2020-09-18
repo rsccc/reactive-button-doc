@@ -1,0 +1,11 @@
+.example-component-wrapper {
+   .flex-section {
+      padding-bottom: 12px;
+   }
+   .flex-section .item {
+      padding: 10px;
+   }
+   .reactive-btn.light.outline {
+      --reactive-button-light-color: darkgrey;
+   }
+}

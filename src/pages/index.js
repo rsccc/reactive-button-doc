@@ -73,7 +73,9 @@ function Home() {
               <ReactiveButton
                 color={'dark'}
                 size={"large"}
-                idleLabel="Get Started&nbsp;&nbsp;→"
+                idleText="Get Started&nbsp;&nbsp;→"
+                width={'170px'}
+                height={'50px'}
               />
             </Link>
           </div>
