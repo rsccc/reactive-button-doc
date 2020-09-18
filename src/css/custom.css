@@ -30,3 +30,50 @@
     flex-direction: row;
     flex-wrap: wrap;
  }
+
+ .z-table-wrapper {
+    border: 1px solid #e0e0e0;
+ }
+ 
+ .z-table-wrapper table {
+    width: 100%;
+    color: #8a8f94;
+    margin-bottom: 0;
+    border-collapse: unset;
+ }
+
+ .z-table-wrapper table tr {
+    background: #fafafa;
+    line-height: 30px;
+}
+
+ .z-table-wrapper table th {
+    background-color: #eee;
+    color: #aaa;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+ .z-table-wrapper table th:nth-child(3) {
+    width: 100%;
+}
+
+ .z-table-wrapper table td:first-child {
+    font-weight: 600;
+    color: #777;
+}
+
+.z-table-wrapper table td:nth-child(2) {
+    color: cadetblue;
+}
+
+ .z-table-wrapper table td, table th {
+  border: none;
+  font-size: 12px;
+  white-space: nowrap !important;
+}
+
+ .z-table-wrapper table tr:nth-child(2n) {
+    background: #fff;
+}

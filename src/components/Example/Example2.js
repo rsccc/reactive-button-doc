@@ -81,9 +81,13 @@ const Example2 = (props) => {
     }
 
     useEffect(() => {
-        buttons.map((button, index) => {
+        const timer = buttons.map((button, index) => {
             button[0].ref.current.click();
         });
+        return () => {
+            //un-mounting
+            clearTimeout(timer);
+        };
     }, [])
 
     return (

@@ -93,7 +93,7 @@ const Example1 = (props) => {
                             successText={button[0].successText}
                             errorText={button[0].errorText}
                             buttonState={button[0].buttonState}
-                            onClick={() => onClickHandler(index)}
+                            onClick={() => {onClickHandler(index)}}
                         />
                     </div>
                 ))}
