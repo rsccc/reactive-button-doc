@@ -16,6 +16,9 @@ module.exports = {
       textColor: '#091E42', // Defaults to `#000`.
       isCloseable: true, // Defaults to `true`.
     },
+    googleAnalytics: {
+      trackingID: 'UA-138314953-4',
+    },
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
@@ -69,6 +72,12 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          cacheTime: 600 * 1000, // 600 sec - cache purge period
+          changefreq: 'weekly',
+          priority: 0.5,
+          trailingSlash: false,
         },
       },
     ],

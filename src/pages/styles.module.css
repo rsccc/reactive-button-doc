@@ -29,15 +29,44 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
-  background-color: #f7f7f7;
-}
-
-html[data-theme=dark] .features {
-    background-color: #33363b;
 }
 
 .featureImage {
   height: 200px;
   width: 200px;
   padding-bottom: 20px;
+}
+
+html[data-theme=dark] .features {
+  background-color: #33363b;
+}
+
+.exampleComponent {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+html[data-theme=dark] .exampleComponent {
+    background-color: #18191a;
+}
+
+.exampleComponent__container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--ifm-spacing-horizontal);
+  padding-right: var(--ifm-spacing-horizontal);
+  width: 100%;
+}
+
+.exampleComponent__item {
+  padding: 50px 100px ;
+}
+
+@media screen and (max-width: 966px) {
+  .exampleComponent__item {
+    padding: unset;
+  }
 }

@@ -9,11 +9,11 @@ title: Usage
 - When the button is clicked, set state to <code>'loading'</code>
 - When the task is completed, set state to <code>'success'</code> or <code>'error'</code> according to your need
 
-```jsx
+```jsx 
 import React, { useState } from 'react';
 import ReactiveButton from 'reactive-button';
 
-function Demo() {
+function App() {
   const [state, setState] = useState('idle');
 
   const onClickHandler = () => {
@@ -31,7 +31,7 @@ function Demo() {
   );
 }
 
-export default Demo;
+export default App;
 ```
 :::note
 

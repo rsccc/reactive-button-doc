@@ -17,6 +17,32 @@
   --ifm-code-font-size: 95%;
 }
 
+::-webkit-scrollbar, .scroller {
+    width: 12px;
+	/* background-color: #F5F5F5; */
+
+}
+ 
+::-webkit-scrollbar-track {
+   border-radius: 0px;
+   box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+* {
+  scrollbar-width: thin;
+  /* scrollbar-color: darkgrey #F5F5F5; */
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    /* box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+   background-color: darkgrey;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
@@ -25,6 +51,7 @@
 }
 
  .flex-section {
+    align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: row;

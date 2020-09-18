@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -8,6 +8,45 @@ import styles from './styles.module.css';
 import ReactiveButton from 'reactive-button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Showcase from '../components/Showcase/Showcase';
+
+const showcaseCode =  `
+  function App() {
+    const [state, setState] = useState('idle');
+    const onClickHandler = () => {
+      setState('loading');
+      setTimeout(() => {
+        setState('success');
+      }, 2000);
+    }
+    return (
+      <ReactiveButton
+        buttonState={state}
+        onClick={onClickHandler}
+        color={'green'}
+        idleText={'I am in idle state'}
+        loadingText={<span><i className="reactive-btn-spinner"></i>I am in loading state</span>}
+        successText={'I am in success state'}
+        errorText={'I am in error state'}
+        type={'button'}
+        className={'class1 class2'}
+        style={{ textAlign: 'center' }}
+        outline={true}
+        shadow={true}
+        rounded={false}
+        size={'large'}
+        block={false}
+        messageDuration={2000}
+        disabled={false}
+        buttonRef={null}
+        width={'200px'}
+        height={'50px'}
+      />
+    );
+  }
+`.trim();
+
+const showcaseScope = { ReactiveButton, useState };
 
 const features = [
   {
@@ -83,6 +122,19 @@ function Home() {
           </div>
         </div>
       </header>
+      <main>
+        <section className={styles.exampleComponent}>
+            <div className={styles.exampleComponent__container}>
+              <div className="row">
+                <div className="col col--12">
+                  <div className={styles.exampleComponent__item}>
+                    <Showcase code={showcaseCode} scope={ showcaseScope } height={'250px'}/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      </main>
       <main>
         {features && features.length > 0 && (
           <section className={styles.features}>
