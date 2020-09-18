@@ -31,6 +31,7 @@
     flex-wrap: wrap;
  }
 
+/* ----------- z-table starts ----------- */
  .z-table-wrapper {
     border: 1px solid #e0e0e0;
  }
@@ -43,16 +44,20 @@
  }
 
  .z-table-wrapper table tr {
-    background: #fafafa;
+    background: var(--ifm-table-background);
     line-height: 30px;
 }
 
  .z-table-wrapper table th {
-    background-color: #eee;
-    color: #aaa;
+    background-color: #e2e4e4;
+    color: #adacac;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+html[data-theme=dark] .z-table-wrapper table th {
+    background-color: #1d1f1f;
 }
 
  .z-table-wrapper table th:nth-child(3) {
@@ -68,12 +73,16 @@
     color: cadetblue;
 }
 
- .z-table-wrapper table td, table th {
+.z-table-wrapper table tr:nth-child(2n) {
+    background-color: var(--ifm-table-stripe-background);
+}
+
+ .z-table-wrapper table td, .z-table-wrapper table th {
   border: none;
   font-size: 12px;
   white-space: nowrap !important;
 }
 
- .z-table-wrapper table tr:nth-child(2n) {
-    background: #fff;
-}
+
+
+/* ----------- z-table ends ----------- */

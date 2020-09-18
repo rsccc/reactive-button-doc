@@ -35,7 +35,7 @@ export default Demo;
 ```
 :::note
 
-Above example demonstrates an asynchronous task. For non asynchronous task, state management is not needed.
+Above example demonstrates an asynchronous task. For non asynchronous task, state management is not needed. Use as like normal button.
 
 :::
 

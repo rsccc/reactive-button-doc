@@ -6,6 +6,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import ReactiveButton from 'reactive-button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const features = [
   {
@@ -73,9 +75,9 @@ function Home() {
               <ReactiveButton
                 color={'dark'}
                 size={"large"}
-                idleText="Get Started&nbsp;&nbsp;→"
+                idleText={<span>Get Started &nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight}/></span>}
                 width={'170px'}
-                height={'50px'}
+                height={'49px'}
               />
             </Link>
           </div>
