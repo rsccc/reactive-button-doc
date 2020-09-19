@@ -2,4 +2,8 @@
     .bg-dark {
         background-color: var(--ifm-color-gray-800);
     }
+
+    .props__container .flex-section {
+        justify-content: left;
+    }
 }

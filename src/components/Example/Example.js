@@ -7,11 +7,13 @@ import './Example.scss';
 
 const Example = () => {
     return (
-        <div className="example-component-wrapper">
-            <Example1/>
-            <Example2/>
-            <Example3/>
-            <Example4/>
+        <div className="card example-component-wrapper shadow--md">
+            <div className="card__body py-5">
+                <Example1/>
+                <Example2/>
+                <Example3/>
+                <Example4/>
+            </div>
         </div>
     );
 };

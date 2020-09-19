@@ -25,7 +25,6 @@ function App() {
     <ReactiveButton
       buttonState={state}
       onClick={onClickHandler}
-      shadow={true}
     />
   );
 }

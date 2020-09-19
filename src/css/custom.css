@@ -28,13 +28,21 @@
   scrollbar-width: thin;
   /* scrollbar-color: darkgrey #F5F5F5; */
 }
+
+@media screen and (min-width: 966px) {
+  ::-webkit-scrollbar, .scroller {
+      width: 8px;
+    background-color: #f1f1f1;
+  }
+}
  
 ::-webkit-scrollbar-thumb {
     /* border-radius: 0px;
     box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
-   background-color: darkgrey;
+   background-color: #888;
+   border-radius: 10px;
 }
 
 .navbar__title {
@@ -496,10 +504,72 @@ html[data-theme=dark] .z-table-wrapper table th {
 
 /* bootstrap custom ends */
 
-/* Media queries */
-@media screen and (min-width: 966px) {
-  ::-webkit-scrollbar, .scroller {
-      width: 10px;
-    /* background-color: #F5F5F5; */
-  }
+/* **************************** z-switch starts **************************** */
+
+.z-switch {
+    --z-switch-ball-bg: var(--ifm-color-primary);
+    --z-switch-checked-bg: var(--ifm-color-primary);
+    --z-switch-border-color: var(--ifm-color-primary);
+    --z-switch-hover-border-color: transparent;
+    --z-switch-disabled-checked-bg: transparent;
+    --z-switch-width: 41px;
+    --z-switch-height: 21px;
+    --z-switch-bg: white;
+    --z-switch-radius: 12px;
+    --z-switch-ball-width: 15px;
+    --z-switch-ball-bg: #d7d7f4;
+    --z-switch-checked-ball-bg: white;
+    --z-switch-border-color: #d7d7f4;
+    --z-switch-hover-border-color: #d7d7f4;
+    --z-switch-checked-bg: var(--ifm-color-primary);
+    --z-switch-disabled-bg: var(--ifm-color-primary-light);
+    --z-switch-disabled-checked-bg: var(--ifm-color-primary-dark);
+    position: relative;
+    width: var(--z-switch-width);
+    height: var(--z-switch-height);
+    background: var(--z-switch-bg);
+    border: 1px solid var(--z-switch-border-color);
+    border-radius: var(--z-switch-radius);
+    cursor: pointer;
+    transition: .3s;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
+
+.z-switch:focus {
+    outline: none;
+}
+
+.z-switch:checked {
+    --z-switch-border-color: var(--ifm-color-primary);
+    background: var(--ifm-color-primary);
+}
+
+.z-switch:checked::before {
+    --z-switch-ball-bg: var(--z-switch-checked-ball-bg);
+    transform: translateX(20px);
+}
+
+.z-switch::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: var(--z-switch-ball-width);
+    height: var(--z-switch-ball-width);
+    background: var(--z-switch-ball-bg);
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.z-switch:disabled {
+    --z-switch-bg: var(--z-switch-disabled-bg);
+    --z-switch-checked-bg: var(--z-switch-disabled-checked-bg);
+}
+
+.z-switch:disabled:checked {
+    --z-switch-border-color: #d7d7f4;
+    background: #d7d7f4;
+}
+/* **************************** z-switch ends **************************** */
