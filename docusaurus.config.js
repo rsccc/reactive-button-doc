@@ -7,7 +7,11 @@ module.exports = {
   favicon: 'img/logo/favicon.ico',
   organizationName: 'arifszn',
   projectName: 'reactive-button',
+  scripts: [
+    
+  ],
   themeConfig: {
+    sidebarCollapsible: false,
     prism: {
       theme: require('prism-react-renderer/themes/palenight'),
       darkTheme: require('prism-react-renderer/themes/palenight'),

@@ -175,14 +175,3 @@ Above example demonstrates an asynchronous task. For non asynchronous task, stat
    </tbody>
 </table>
 </div>
-
-## Playground
-
-
-import Showcase from '../src/components/Showcase/Showcase';
-import ShowcasePlaygroundCode from '../src/ShowcasePlaygroundCode';
-import { useState } from 'react';
-import ReactiveButton from 'reactive-button';
-
-
-<Showcase code={ShowcasePlaygroundCode} scope={{ ReactiveButton, useState }}/>
