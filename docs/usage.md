@@ -14,21 +14,21 @@ import React, { useState } from 'react';
 import ReactiveButton from 'reactive-button';
 
 function App() {
-  const [state, setState] = useState('idle');
+   const [state, setState] = useState('idle');
 
-  const onClickHandler = () => {
-    setState('loading');
-    setTimeout(() => {
-      setState('success');
-    }, 2000);
-  }
+   const onClickHandler = () => {
+      setState('loading');
+      setTimeout(() => {
+         setState('success');
+      }, 2000);
+   }
 
-  return (
-        <ReactiveButton
-          buttonState={state}
-          onClick={onClickHandler}
-        />
-  );
+   return (
+      <ReactiveButton
+         buttonState={state}
+         onClick={onClickHandler}
+      />
+   );
 }
 
 export default App;
@@ -175,3 +175,14 @@ Above example demonstrates an asynchronous task. For non asynchronous task, stat
    </tbody>
 </table>
 </div>
+
+## Playground
+
+
+import Showcase from '../src/components/Showcase/Showcase';
+import ShowcasePlaygroundCode from '../src/ShowcasePlaygroundCode';
+import { useState } from 'react';
+import ReactiveButton from 'reactive-button';
+
+
+<Showcase code={ShowcasePlaygroundCode} scope={{ ReactiveButton, useState }}/>

@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import useThemeContext from '@theme/hooks/useThemeContext';
+import palenight from 'prism-react-renderer/themes/palenight';
 
 const Showcase = ({ noInline, code, scope, height }) => {
     const {isDarkTheme} = useThemeContext();
@@ -117,7 +118,6 @@ const Showcase = ({ noInline, code, scope, height }) => {
     `;
 
     const StyledEditor = styled.div`
-    background: rgb(41, 45, 62);
     font-family: 'Source Code Pro', monospace;
     font-size: 14px;
     height: ${height};
@@ -132,7 +132,7 @@ const Showcase = ({ noInline, code, scope, height }) => {
     const StyledPreview = styled(LivePreview)`
     position: relative;
     padding: 0.5rem;
-    background: ${isDarkTheme ? '#0c0e0e' : '#e3eaea'};
+    background: ${isDarkTheme ? '#232525' : '#e3eaea'};
     color: black;
     height: auto;
     overflow: hidden;
@@ -155,7 +155,7 @@ const Showcase = ({ noInline, code, scope, height }) => {
     font-family: 'Source Code Pro', monospace;
     `;
     return (
-        <StyledProvider code={code} noInline={noInline} theme={reactLiveHome} scope={scope}>
+        <StyledProvider code={code} noInline={noInline} theme={palenight} scope={scope}>
             <LiveWrapper>
                 <StyledEditor>
                     <LiveEditor />

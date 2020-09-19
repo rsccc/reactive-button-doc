@@ -4,12 +4,16 @@ module.exports = {
   url: 'https://arifszn.github.io',
   baseUrl: '/reactive-button/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo/favicon.ico',
   organizationName: 'arifszn',
   projectName: 'reactive-button',
   themeConfig: {
+    prism: {
+      theme: require('prism-react-renderer/themes/palenight'),
+      darkTheme: require('prism-react-renderer/themes/palenight'),
+    },
     announcementBar: {
-      id: 'support_us', // Any value that will identify this message.
+      id: 'support_us_1', // Any value that will identify this message.
       content:
         '⭐️ If you like Reactive Button, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reactive-button">GitHub</a>! ⭐️',
       backgroundColor: '#fafbfc', // Defaults to `#fff`.
@@ -41,7 +45,7 @@ module.exports = {
       hideOnScroll: false,
       logo: {
         alt: 'Logo',
-        src: 'img/logo.png',
+        src: 'img/logo/logo.svg',
       },
       items: [
         {

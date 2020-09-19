@@ -7,26 +7,20 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary: #5867dd;
+  --ifm-color-primary-dark: #3e50d8;
+  --ifm-color-primary-darker: #3144d5;
+  --ifm-color-primary-darkest: #2535b4;
+  --ifm-color-primary-light: #727ee2;
+  --ifm-color-primary-lighter: #7f8ae5;
+  --ifm-color-primary-lightest: #a5aded;
   --ifm-code-font-size: 95%;
 }
 
-::-webkit-scrollbar, .scroller {
-    width: 12px;
-	/* background-color: #F5F5F5; */
-
-}
- 
 ::-webkit-scrollbar-track {
-   border-radius: 0px;
+   /* border-radius: 0px;
    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
 	-moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
@@ -36,11 +30,15 @@
 }
  
 ::-webkit-scrollbar-thumb {
-    border-radius: 0px;
-    /* box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    /* border-radius: 0px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
    background-color: darkgrey;
+}
+
+.navbar__title {
+  color: var(--ifm-color-primary);
 }
 
 .docusaurus-highlight-code-line {
@@ -110,6 +108,63 @@ html[data-theme=dark] .z-table-wrapper table th {
   white-space: nowrap !important;
 }
 
-
-
 /* ----------- z-table ends ----------- */
+
+/* bootstrap custom starts */
+.p-0 {
+    padding: 0;
+}
+
+.p-1 {
+    padding: .25rem;
+}
+
+.p-2 {
+    padding: .5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.p-5 {
+    padding: 3rem;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.m-1 {
+    margin: .25rem;
+}
+
+.m-2 {
+    margin: .5rem;
+}
+
+.m-3 {
+    margin: 1rem;
+}
+
+.m-4 {
+    margin: 1.5rem;
+}
+
+.m-5 {
+    margin: 3rem;
+}
+
+/* bootstrap custom ends */
+
+/* Media queries */
+@media screen and (min-width: 966px) {
+  ::-webkit-scrollbar, .scroller {
+      width: 10px;
+    /* background-color: #F5F5F5; */
+  }
+}

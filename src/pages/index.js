@@ -11,39 +11,24 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Showcase from '../components/Showcase/Showcase';
 
 const showcaseCode =  `
-  function App() {
-    const [state, setState] = useState('idle');
-    const onClickHandler = () => {
-      setState('loading');
-      setTimeout(() => {
-        setState('success');
-      }, 2000);
-    }
-    return (
-      <ReactiveButton
-        buttonState={state}
-        onClick={onClickHandler}
-        color={'green'}
-        idleText={'I am in idle state'}
-        loadingText={<span><i className="reactive-btn-spinner"></i>I am in loading state</span>}
-        successText={'I am in success state'}
-        errorText={'I am in error state'}
-        type={'button'}
-        className={'class1 class2'}
-        style={{ textAlign: 'center' }}
-        outline={true}
-        shadow={true}
-        rounded={false}
-        size={'large'}
-        block={false}
-        messageDuration={2000}
-        disabled={false}
-        buttonRef={null}
-        width={'200px'}
-        height={'50px'}
-      />
-    );
+function App() {
+  const [state, setState] = useState('idle');
+
+  const onClickHandler = () => {
+    setState('loading');
+    setTimeout(() => {
+      setState('success');
+    }, 2000);
   }
+
+  return (
+    <ReactiveButton
+      buttonState={state}
+      onClick={onClickHandler}
+      shadow={true}
+    />
+  );
+}
 `.trim();
 
 const showcaseScope = { ReactiveButton, useState };
@@ -51,42 +36,57 @@ const showcaseScope = { ReactiveButton, useState };
 const features = [
   {
     title: 'Reactive',
-    imageUrl: 'img/reactive.svg',
     description: (
       <>
-        Replacing traditional button with reactive behaviour
+        Replacing traditional button with reactive behavior.
       </>
     ),
   },
   {
     title: 'Customizable',
-    imageUrl: 'img/customizable.svg',
     description: (
       <>
-        Comes with proper customization option.
+        Comes with proper customization. Use the beautiful default themes or create your own.
+      </>
+    ),
+  },
+  {
+    title: 'Not a rocket science',
+    description: (
+      <>
+        You know button? Use it like a button. It's super easy to use. 
+      </>
+    ),
+  },
+  {
+    title: 'Lightweight',
+    description: (
+      <>
+        Extremely small in size. Less than 20 KB with zero dependency.
+      </>
+    ),
+  },
+  {
+    title: 'Flexible',
+    description: (
+      <>
+        Reactive button is an isolated component. Use it with any UI library. 
       </>
     ),
   },
   {
     title: 'Progress Indicator',
-    imageUrl: 'img/progress.svg',
     description: (
       <>
-        Knows what is happening behind your button click.
+        Don't just click button. See what is happening behind your button click.
       </>
     ),
   },
 ];
 
-function Feature({imageUrl, title, description}) {
-  const imgUrl = useBaseUrl(imageUrl);
+function Feature({title, description}) {
   return (
-    <div className={clsx('col col--4 text--center', styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
+    <div className={clsx('col col--4 text--center p-4', styles.feature)}>
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
@@ -99,10 +99,17 @@ function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="A React Button component that thinks like React.">
+      description={`${siteConfig.tagline}`}>
       <header className={clsx('hero ', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
+          <div className="text--center">
+            <img
+              alt="Docusaurus with Keytar"
+              className={styles.logo}
+              src={useBaseUrl('img/logo/logo.svg')}
+            />
+        </div>
+          <h1 className="hero__title"><span className={styles.heroProjectKeywords}>React</span><span className={styles.heroProjectKeywordsSecondary}>ive</span> <span className={styles.heroProjectKeywords}>Button</span></h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
