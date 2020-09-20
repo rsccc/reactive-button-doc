@@ -1,9 +1,15 @@
 .playground-component-wrapper {
-    .bg-dark {
-        background-color: var(--ifm-color-gray-800);
+    .playground__bg {
+        background-color: var(--ifm-color-gray-300);
     }
 
     .props__container .flex-section {
         justify-content: left;
     }
+    
+    .form-control {
+        font-size: inherit !important;
+    }
+
+    
 }

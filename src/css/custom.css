@@ -573,3 +573,7 @@ html[data-theme=dark] .z-table-wrapper table th {
     background: #d7d7f4;
 }
 /* **************************** z-switch ends **************************** */
+
+.keyword {
+  color: var(--ifm-color-primary);
+}
