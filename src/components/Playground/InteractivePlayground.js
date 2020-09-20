@@ -190,7 +190,7 @@ const InteractivePlayground = () => {
                     <div className="container props__container">
                         <div className="row" style={{fontSize: '13px'}}>
                             <div className="col col--6 bootstrap">
-                                <div className="pt-4">
+                                <div className="pt-lg-4">
                                     <div className="form-group row">
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">buttonState</label>
                                         <div className="col-sm-6">
@@ -258,7 +258,7 @@ const InteractivePlayground = () => {
                                 </div>
                             </div>
                             <div className="col col--6 bootstrap">
-                                <div className="pt-4">
+                                <div className="pt-lg-4">
                                     <div className="form-group row">
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">color</label>
                                         <div className="col-sm-6">

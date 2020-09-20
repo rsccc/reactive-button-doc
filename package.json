@@ -24,7 +24,7 @@
     "react-dom": "^16.8.4",
     "react-jsx-parser": "^1.25.1",
     "react-live": "^2.2.2",
-    "reactive-button": "^1.1.4",
+    "reactive-button": "^1.1.5",
     "styled-components": "^5.2.0"
   },
   "browserslist": {
