@@ -3,11 +3,11 @@ id: usage
 title: Usage
 ---
 
-## Basic Usage
-
 - Initialize a state with string value <code>'idle'</code>
 - When the button is clicked, set state to <code>'loading'</code>
 - When the task is completed, set state to <code>'success'</code> or <code>'error'</code> according to your need
+
+## Basic Usage
 
 ```jsx 
 import React, { useState } from 'react';
@@ -33,9 +33,55 @@ function App() {
 
 export default App;
 ```
+
+## Full Usage
+
+```jsx 
+import React, { useState } from 'react';
+import ReactiveButton from 'reactive-button';
+
+function App() {
+   const [state, setState] = useState('idle');
+
+   const onClickHandler = () => {
+      setState('loading');
+      setTimeout(() => {
+      setState('success');
+      }, 2000);
+   }
+
+   return (
+      <ReactiveButton
+         buttonState={state}
+         onClick={onClickHandler}
+         color={'primary'}
+         idleText={'Button'}
+         loadingText={<span><i className="reactive-btn-spinner"></i>Loading</span>}
+         successText={'Success!'}
+         errorText={'Error!'}
+         type={'button'}
+         className={'class1 class2'}
+         style={{ textAlign: 'center' }}
+         outline={false}
+         shadow={false}
+         rounded={false}
+         size={'normal'}
+         block={false}
+         messageDuration={2000}
+         disabled={false}
+         buttonRef={null}
+         width={null}
+         height={null}
+      />
+  );
+}
+
+export default App;
+```
+
 :::note
 
-Above example demonstrates an asynchronous task. For non asynchronous task, state management is not needed. Use as like normal button.
+Above examples demonstrate an asynchronous task. For non asynchronous task, state management is not needed. Use as like normal button.
 
 :::
 

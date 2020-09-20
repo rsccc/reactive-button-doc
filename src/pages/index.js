@@ -53,7 +53,7 @@ const features = [
     title: 'Not a rocket science',
     description: (
       <>
-        You know button? Use it like a button. It's super easy to use. 
+        You know button? Use it just like a button. It's super easy and simple. 
       </>
     ),
   },

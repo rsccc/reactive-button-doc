@@ -514,7 +514,7 @@ html[data-theme=dark] .z-table-wrapper table th {
     --z-switch-disabled-checked-bg: transparent;
     --z-switch-width: 41px;
     --z-switch-height: 21px;
-    --z-switch-bg: white;
+    --z-switch-bg: var(--ifm-background-color);
     --z-switch-radius: 12px;
     --z-switch-ball-width: 15px;
     --z-switch-ball-bg: #d7d7f4;

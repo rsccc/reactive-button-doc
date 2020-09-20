@@ -8,7 +8,6 @@ module.exports = {
   organizationName: 'arifszn',
   projectName: 'reactive-button',
   scripts: [
-    
   ],
   themeConfig: {
     sidebarCollapsible: false,
