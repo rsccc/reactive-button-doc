@@ -215,12 +215,6 @@ const InteractivePlayground = () => {
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">className</label>
-                                        <div className="col-sm-6">
-                                            <input type="text" className="form-control form-control-sm" id="className" placeholder="" value={className} onChange={classNameOnChangeHandler}/>
-                                        </div>
-                                    </div>
-                                    <div className="form-group row">
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">shadow</label>
                                         <div className="col-sm-6 align-self-end">
                                             <input type="checkbox" id='shadow' checked={shadow} onChange={shadowOnChangeHandler} className="z-switch" />
@@ -239,14 +233,19 @@ const InteractivePlayground = () => {
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">width</label>
+                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">className</label>
                                         <div className="col-sm-6">
-                                            <div className="input-group">
-                                                <input type="number" className="form-control" id="width" value={width} onChange={widthOnChangeHandler} placeholder="null"/>
-                                                <div className="input-group-prepend">
-                                                    <span className="input-group-text">px</span>
-                                                </div>
-                                            </div>
+                                            <input type="text" className="form-control form-control-sm" id="className" placeholder="" value={className} onChange={classNameOnChangeHandler}/>
+                                        </div>
+                                    </div>
+                                    <div className="form-group row">
+                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">size</label>
+                                        <div className="col-sm-6">
+                                            <select className="form-control form-control-sm" id="size" value={size} onChange={sizeOnChangeHandler}>
+                                                <option value="small">small</option>
+                                                <option value="normal">normal</option>
+                                                <option value="large">large</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div className="form-group row">
@@ -284,16 +283,6 @@ const InteractivePlayground = () => {
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">size</label>
-                                        <div className="col-sm-6">
-                                            <select className="form-control form-control-sm" id="size" value={size} onChange={sizeOnChangeHandler}>
-                                                <option value="small">small</option>
-                                                <option value="normal">normal</option>
-                                                <option value="large">large</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="form-group row">
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">rounded</label>
                                         <div className="col-sm-6 align-self-end">
                                             <input type="checkbox" id='rounded' checked={rounded} onChange={roundedOnChangeHandler} className="z-switch" />
@@ -309,6 +298,17 @@ const InteractivePlayground = () => {
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">disabled</label>
                                         <div className="col-sm-6 align-self-end">
                                             <input type="checkbox" id='disabled' checked={disabled} onChange={disabledChangeHandler} className="z-switch" />
+                                        </div>
+                                    </div>
+                                    <div className="form-group row">
+                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">width</label>
+                                        <div className="col-sm-6">
+                                            <div className="input-group">
+                                                <input type="number" className="form-control" id="width" value={width} onChange={widthOnChangeHandler} placeholder="null"/>
+                                                <div className="input-group-prepend">
+                                                    <span className="input-group-text">px</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="form-group row">
