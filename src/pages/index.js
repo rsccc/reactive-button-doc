@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -95,6 +95,13 @@ function Feature({title, description}) {
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
+
+  const [showGetStartedButton, setShowGetStartedButton] = useState(false);
+
+  useEffect(() => {
+    setShowGetStartedButton(true);
+  }, []);
+
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -118,11 +125,13 @@ function Home() {
               )}
               to={useBaseUrl('docs/')}>
               <ReactiveButton
+                style={{ display: showGetStartedButton ? 'block' : 'none' }}
                 color={'dark'}
                 size={"large"}
                 idleText={<span>Get Started &nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight}/></span>}
                 width={'170px'}
                 height={'49px'}
+                className={'fadeIn'}
               />
             </Link>
           </div>

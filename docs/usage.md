@@ -3,9 +3,15 @@ id: usage
 title: Usage
 ---
 
-- Initialize a state with string value <code>'idle'</code>
-- When the button is clicked, set state to <code>'loading'</code>
-- When the task is completed, set state to <code>'success'</code> or <code>'error'</code> according to your need
+:::note
+
+Below example demonstrates an asynchronous task. When clicking the button, an asynchronous task (e.g. Data fetch, form submit) will be processed and after processing, a success or error message will be displayed.
+
+:::
+
+- Initialize a state with string value <code>'idle'</code> and assign it as <strong>'buttonState'</strong> prop. Now it will render an idle text.
+- When the button is clicked, set state's value to <code>'loading'</code>. 
+- When the task is completed, set state to <code>'success'</code> or <code>'error'</code> according to your need.
 
 ## Basic Usage
 
@@ -82,9 +88,13 @@ export default App;
 
 :::note
 
-Above examples demonstrate an asynchronous task. For non asynchronous task, state management is not needed. Use as like normal button.
+For non asynchronous task, state management is not needed. Use as like normal button.
 
 :::
+
+import Link from '@docusaurus/Link';
+
+Explore the <Link to="/docs/Playground">Playground</Link> to see the codes take effect.
 
 ## Available Props 
 

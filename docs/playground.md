@@ -8,7 +8,7 @@ Let's explore the different options that <span className="keyword">React Button<
 
 ## Interactive Playground
 
-Toggle and change the props to see changes.
+Toggle or change the props to see changes.
 
 import InteractivePlayground from '../src/components/Playground/InteractivePlayground';
 
@@ -16,7 +16,7 @@ import InteractivePlayground from '../src/components/Playground/InteractivePlayg
 
 ## Editor Playground
 
-Edit code and see the changes in real time.
+Edit code to see changes.
 
 import EditorPlayground from '../src/components/Playground/EditorPlayground';
 
