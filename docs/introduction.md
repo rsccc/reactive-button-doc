@@ -5,6 +5,14 @@ sidebar_label: Introduction
 slug: /
 ---
 
+<p align="center" className="reactive-button-badges">
+    <a href="https://www.npmjs.com/package/reactive-button"><img src="https://img.shields.io/npm/v/reactive-button"/></a>
+    <img src="https://img.shields.io/bundlephobia/min/reactive-button"/>
+    <img src="https://arifszn.github.io/reactive-button/img/dependencies.svg"/>
+    <a href="https://github.com/arifszn/reactive-button/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/reactive-button"/></a>
+    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-informational" alt="Author arifszn"/></a>
+</p>
+
 Reactive Button is a beautiful react component to replace the traditional boring buttons. Comes with keeping customization on top. Let the users visualize what is happening after button click.
 
 ## Example

@@ -55,7 +55,7 @@ function App() {
          buttonState={state}
          onClick={onClickHandler}
          color={'primary'}
-         idleText={'Button'}
+         idleText={'Click Me'}
          loadingText={<span><i className="reactive-btn-spinner"></i>Loading</span>}
          successText={'Success!'}
          errorText={'Error!'}
@@ -72,6 +72,7 @@ function App() {
          buttonRef={null}
          width={null}
          height={null}
+         animation={true}
       />
   );
 }
@@ -217,6 +218,12 @@ Above examples demonstrate an asynchronous task. For non asynchronous task, stat
          <td align="center">string | null</td>
          <td align="left">Override button height</td>
          <td align="center">null</td>
+      </tr>
+      <tr>
+         <td align="left">animation</td>
+         <td align="center">boolean</td>
+         <td align="left">Button hover and click animation</td>
+         <td align="center">true</td>
       </tr>
    </tbody>
 </table>

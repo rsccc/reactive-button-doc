@@ -19,9 +19,9 @@ const Example1 = (props) => {
         ref: useRef(),
         color: 'dark',
         idleText: 'Dark',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        loadingText: <span><span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
+        successText: <span><span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
+        errorText: <span><span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'success',
     });

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import ReactiveButton from 'reactive-button';
 import JsxParser from 'react-jsx-parser';
-import './Playground.scss';
+import './InteractivePlayground.scss';
 import '../../css/bootstrap.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const Playground = () => {
+const InteractivePlayground = () => {
     const defaultValues = {
         buttonState: 'idle',
         color: 'primary',
@@ -23,7 +23,8 @@ const Playground = () => {
         block: false,
         disabled: false,
         width: 0,
-        height: 0
+        height: 0,
+        animation: true
     };
     const [buttonState, setButtonState] = useState(defaultValues.buttonState);
     const [color, setColor] = useState(defaultValues.color);
@@ -41,6 +42,7 @@ const Playground = () => {
     const [disabled, setDisabled] = useState(defaultValues.disabled);
     const [width, setWidth] = useState(defaultValues.width);
     const [height, setHeight] = useState(defaultValues.height);
+    const [animation, setAnimation] = useState(defaultValues.animation);
 
     const [disableButtonStateProp, setDisableButtonStateProp] = useState(false);
 
@@ -128,6 +130,10 @@ const Playground = () => {
         setHeight(e.target.value);
     }
 
+    const animationOnChangeHandler = (e) => {
+        setAnimation(e.target.checked === true ? true : false);
+    }
+
     const resetAll = () => {
         setButtonState(defaultValues.buttonState);
         setColor(defaultValues.buttonState);
@@ -145,12 +151,13 @@ const Playground = () => {
         setDisabled(defaultValues.disabled);
         setWidth(defaultValues.width);
         setHeight(defaultValues.height);
+        setAnimation(defaultValues.animation);
     }
     
     return (
-        <div className="playground-component-wrapper">
+        <div className="interactive-playground-component-wrapper">
             <div className="mb-3">
-                <div className="card playground__card bg-dark">
+                <div className="card playground__card">
                     <div className="card__body my-auto text-center">
                         <ReactiveButton
                             buttonState={buttonState}
@@ -173,11 +180,12 @@ const Playground = () => {
                             buttonRef={null}
                             width={width ? `${width}px` : null}
                             height={height ? `${height}px` : null}
+                            animation={animation}
                         />
                     </div>
                 </div>
             </div>
-            <div className="card shadow--lw">
+            <div className="card shadow-dim">
                 <div className="card__body">
                     <div className="container props__container">
                         <div className="row" style={{fontSize: '13px'}}>
@@ -225,9 +233,9 @@ const Playground = () => {
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">messageDuration</label>
-                                        <div className="col-sm-6">
-                                            <input type="number" className="form-control form-control-sm" id="messageDuration" value={messageDuration} onChange={messageDurationOnChangeHandler} placeholder="2000"/>
+                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">animation</label>
+                                        <div className="col-sm-6 align-self-end">
+                                            <input type="checkbox" id='animation' checked={animation} onChange={animationOnChangeHandler} className="z-switch" />
                                         </div>
                                     </div>
                                     <div className="form-group row">
@@ -241,6 +249,12 @@ const Playground = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="form-group row">
+                                        <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">messageDuration</label>
+                                        <div className="col-sm-6">
+                                            <input type="number" className="form-control form-control-sm" id="messageDuration" value={messageDuration} onChange={messageDurationOnChangeHandler} placeholder="2000"/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col col--6 bootstrap">
@@ -249,11 +263,11 @@ const Playground = () => {
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">color</label>
                                         <div className="col-sm-6">
                                             <select className="form-control form-control-sm" id="color" value={color} onChange={colorOnChangeHandler}>
-                                                <option value="primary">Primary</option>
-                                                <option value="dark">Dark</option>
-                                                <option value="light">Light</option>
-                                                <option value="green">Green</option>
-                                                <option value="red">Red</option>
+                                                <option value="primary">primary</option>
+                                                <option value="dark">dark</option>
+                                                <option value="light">light</option>
+                                                <option value="green">green</option>
+                                                <option value="red">red</option>
                                             </select>
                                         </div>
                                     </div>
@@ -313,13 +327,15 @@ const Playground = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card__footer text-center">
+                <div className="card__footer text-center my-2">
                     <ReactiveButton
                         size="large"
                         idleText={'Reset All'}
                         color="dark"
                         height="40px"
+                        disabled={disableButtonStateProp}
                         onClick={resetAll}
+                        style={{borderRadius: '10px'}}
                     />
                 </div>
             </div>
@@ -327,4 +343,4 @@ const Playground = () => {
     );
 };
 
-export default Playground;
+export default InteractivePlayground;

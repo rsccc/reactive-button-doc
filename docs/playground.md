@@ -2,18 +2,22 @@
 id: playground
 title: Playground
 ---
-:::caution
 
-This section is a work in progress.
+Let's explore the different options that <span className="keyword">React Button</span> offers.
 
-:::
-
-Let's explore the different options that <span className="keyword">React Button</span> offers. 
-
-<!-- Play around in interactive playground or edit code and see the changes real time in editor playground. -->
 
 ## Interactive Playground
 
-import Playground from '../src/components/Playground/Playground';
+Toggle and change the props to see changes.
 
-<Playground />
+import InteractivePlayground from '../src/components/Playground/InteractivePlayground';
+
+<InteractivePlayground/>
+
+## Editor Playground
+
+Edit code and see the changes in real time.
+
+import EditorPlayground from '../src/components/Playground/EditorPlayground';
+
+<EditorPlayground/>
