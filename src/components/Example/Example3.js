@@ -1,15 +1,20 @@
-import { faCheck, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faCircleNotch, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactiveButton from 'reactive-button';
+import { BiLoader } from 'react-icons/bi';
+import { ImSpinner8 } from 'react-icons/im';
+import { SiSpinrilla } from 'react-icons/si';
+import { ImSpinner4 } from 'react-icons/im';
+import { ImSpinner9 } from 'react-icons/im';
 
 const Example3 = (props) => {
     const [button1, setButton1] = useState({
         ref: useRef(),
         color: 'primary',
         idleText: 'Primary',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
+        loadingText: 'Loading',
+        successText: <span><FontAwesomeIcon icon={faCheck}/> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'loading',
         endState: 'success',
@@ -19,7 +24,7 @@ const Example3 = (props) => {
         ref: useRef(),
         color: 'dark',
         idleText: 'Dark',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
+        loadingText: <span className="center-this"><BiLoader className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'loading',
@@ -30,7 +35,7 @@ const Example3 = (props) => {
         ref: useRef(),
         color: 'light',
         idleText: 'Light',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
+        loadingText: <span className="center-this"><ImSpinner9 className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'loading',
@@ -41,7 +46,7 @@ const Example3 = (props) => {
         ref: useRef(),
         color: 'green',
         idleText: 'Green',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
+        loadingText: <span className="center-this"><SiSpinrilla className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'loading',
@@ -52,7 +57,7 @@ const Example3 = (props) => {
         ref: useRef(),
         color: 'red',
         idleText: 'Red',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
+        loadingText: <span className="center-this"><ImSpinner8 className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'loading',
@@ -97,7 +102,6 @@ const Example3 = (props) => {
                     <div className="item" key={index}>
                         <ReactiveButton
                             outline={false}
-                            rounded={true}
                             buttonRef={button[0].ref}
                             color={button[0].color}
                             idleText={button[0].idleText}

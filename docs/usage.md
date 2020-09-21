@@ -61,13 +61,13 @@ function App() {
          buttonState={state}
          onClick={onClickHandler}
          color={'primary'}
-         idleText={'Click Me'}
-         loadingText={<span><i className="reactive-btn-spinner"></i>Loading</span>}
-         successText={'Success!'}
-         errorText={'Error!'}
+         idleText={'Button'}
+         loadingText={'Loading'}
+         successText={'Success'}
+         errorText={'Error'}
          type={'button'}
          className={'class1 class2'}
-         style={{ textAlign: 'center' }}
+         style={{ borderRadius: '5px' }}
          outline={false}
          shadow={false}
          rounded={false}
@@ -79,7 +79,7 @@ function App() {
          width={null}
          height={null}
          animation={true}
-      />
+    />
   );
 }
 
@@ -143,13 +143,13 @@ Explore the <Link to="/docs/Playground">Playground</Link> to see the codes take 
          <td align="left">successText</td>
          <td align="center">string | ReactNode</td>
          <td align="left">Button text when loading successful</td>
-         <td align="center">'Success!'</td>
+         <td align="center">'Success'</td>
       </tr>
       <tr>
          <td align="left">errorText</td>
          <td align="center">string | ReactNode</td>
          <td align="left">Button text when loading failed</td>
-         <td align="center">'Error!'</td>
+         <td align="center">'Error'</td>
       </tr>
       <tr>
          <td align="left">type</td>

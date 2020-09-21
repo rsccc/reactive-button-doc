@@ -1,4 +1,4 @@
-import { faCheck, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faExclamation, faExclamationCircle, faRadiation, faSpinner, faThumbsDown, faTimes, faUserTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactiveButton from 'reactive-button';
@@ -21,7 +21,7 @@ const Example4 = (props) => {
         idleText: 'Dark',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        errorText: <span> <span><FontAwesomeIcon icon={faThumbsDown}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'error',
     });
@@ -32,7 +32,7 @@ const Example4 = (props) => {
         idleText: 'Light',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        errorText: <span> <span><FontAwesomeIcon icon={faUserTimes}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'error',
     });
@@ -43,7 +43,7 @@ const Example4 = (props) => {
         idleText: 'Green',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        errorText: <span> <span><FontAwesomeIcon icon={faExclamationCircle}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'error',
     });
@@ -54,7 +54,7 @@ const Example4 = (props) => {
         idleText: 'Red',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        errorText: <span> <span><FontAwesomeIcon icon={faRadiation}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'error',
     });

@@ -9,9 +9,9 @@ const Example = () => {
     return (
         <div className="card example-component-wrapper shadow-dim">
             <div className="card__body py-5">
+                <Example3/>
                 <Example1/>
                 <Example2/>
-                <Example3/>
                 <Example4/>
             </div>
         </div>

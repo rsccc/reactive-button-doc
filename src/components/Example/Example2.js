@@ -1,4 +1,4 @@
-import { faCheck, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck, faCheck, faCheckCircle, faHandPeace, faSpinner, faThumbsUp, faTimes, faUserCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactiveButton from 'reactive-button';
@@ -20,7 +20,7 @@ const Example2 = (props) => {
         color: 'dark',
         idleText: 'Dark',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
+        successText: <span> <span><FontAwesomeIcon icon={faThumbsUp}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'success',
@@ -31,7 +31,7 @@ const Example2 = (props) => {
         color: 'light',
         idleText: 'Light',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
+        successText: <span> <span><FontAwesomeIcon icon={faUserCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'success',
@@ -42,7 +42,7 @@ const Example2 = (props) => {
         color: 'green',
         idleText: 'Green',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
+        successText: <span> <span><FontAwesomeIcon icon={faCheckCircle}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'success',
@@ -53,7 +53,7 @@ const Example2 = (props) => {
         color: 'red',
         idleText: 'Red',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
+        successText: <span> <span><FontAwesomeIcon icon={faCalendarCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'success',

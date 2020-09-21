@@ -3,7 +3,7 @@ import ReactiveButton from 'reactive-button';
 import './EditorPlayground.scss';
 import palenight from 'prism-react-renderer/themes/palenight';
 import {LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import { faCheck, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faSpinner, faTimes, faCircleNotch, faThumbsUp, faBomb } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const EditorPlayground = () => {
@@ -24,12 +24,12 @@ const EditorPlayground = () => {
                 onClick={onClickHandler}
                 color={'primary'}
                 idleText={'Click Me'}
-                loadingText={<span><span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>}
-                successText={<span><span><FontAwesomeIcon icon={faCheck}/></span> Success</span>}
-                errorText={<span><span><FontAwesomeIcon icon={faTimes}/></span> Error</span>}
+                loadingText={<React.Fragment><span><FontAwesomeIcon icon={faCircleNotch} spin/></span> Loading</React.Fragment>}
+                successText={<React.Fragment><span><FontAwesomeIcon icon={faThumbsUp}/></span> Success</React.Fragment>}
+                errorText={<React.Fragment><span><FontAwesomeIcon icon={faBomb}/></span> Error</React.Fragment>}
                 type={'button'}
                 className={'class1 class2'}
-                style={{ textAlign: 'center' }}
+                style={{ borderRadius: '5px' }}
                 outline={false}
                 shadow={false}
                 rounded={false}
@@ -47,7 +47,7 @@ const EditorPlayground = () => {
     `;
     return (
         <div className="editor-playground-component-wrapper">
-            <LiveProvider code={code} theme={palenight} scope={{useState, ReactiveButton, FontAwesomeIcon, faCheck, faSpinner, faTimes}}>
+            <LiveProvider code={code} theme={palenight} scope={{useState, ReactiveButton, FontAwesomeIcon, faCheck, faSpinner, faTimes, faCircleNotch, faThumbsUp, faBomb}}>
                 <div className="mb-3">
                     <div className="card playground__card">
                         <div className="card__body my-auto text-center">

@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import ReactiveButton from 'reactive-button';
-import JsxParser from 'react-jsx-parser';
 import './InteractivePlayground.scss';
 import '../../css/bootstrap.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faSpinner, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const InteractivePlayground = () => {
     const defaultValues = {
         buttonState: 'idle',
         color: 'primary',
         idleText: 'Click Me',
-        loadingText: '<span><i className="reactive-btn-spinner"></i>Loading</span>',
-        successText: 'Success!',
-        errorText: 'Error!',
+        loadingText: 'Loading',
+        successText: 'Success',
+        errorText: 'Error',
         className: '',
         outline: false,
         shadow: false,
@@ -31,7 +28,7 @@ const InteractivePlayground = () => {
     const [idleText, setIdleText] = useState(defaultValues.idleText);
     const [loadingText, setLoadingText] = useState(defaultValues.loadingText);
     const [successText, setSuccessText] = useState(defaultValues.successText);
-    const [errorText, setErrorTest] = useState(defaultValues.errorText);
+    const [errorText, setErrorText] = useState(defaultValues.errorText);
     const [className, setClassName] = useState(defaultValues.className);
     const [outline, setOutline] = useState(defaultValues.outline);
     const [shadow, setShadow] = useState(defaultValues.shadow);
@@ -58,7 +55,9 @@ const InteractivePlayground = () => {
 
     useEffect(() => {
         if (buttonState === 'success' || buttonState === 'error') {
+            setDisableButtonStateProp(true);
             setTimeout(() => {
+                setDisableButtonStateProp(false);
                 setButtonState('idle');
             }, 2000);
         }
@@ -140,7 +139,7 @@ const InteractivePlayground = () => {
         setIdleText(defaultValues.idleText);
         setLoadingText(defaultValues.loadingText);
         setSuccessText(defaultValues.successText);
-        setErrorTest(defaultValues.errorText);
+        setErrorText(defaultValues.errorText);
         setClassName(defaultValues.className);
         setSize(defaultValues.size);
         setShadow(defaultValues.shadow);
@@ -163,10 +162,10 @@ const InteractivePlayground = () => {
                             buttonState={buttonState}
                             onClick={buttonOnClickHandler}
                             color={color}
-                            idleText={<JsxParser jsx={idleText === '' ? defaultValues.idleText : idleText}/>}
-                            loadingText={<JsxParser jsx={idleText === '' ? defaultValues.loadingText : loadingText}/>} 
-                            successText={<JsxParser jsx={successText === '' ? defaultValues.successText : successText}/>}
-                            errorText={<JsxParser jsx={errorText === '' ? defaultValues.errorText : errorText}/>} 
+                            idleText={idleText === '' ? defaultValues.idleText : idleText}
+                            loadingText={idleText === '' ? defaultValues.loadingText : loadingText} 
+                            successText={successText === '' ? defaultValues.successText : successText}
+                            errorText={errorText === '' ? defaultValues.errorText : errorText} 
                             type={'button'}
                             className={className}
                             style={{}}
@@ -211,7 +210,7 @@ const InteractivePlayground = () => {
                                     <div className="form-group row">
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">successText</label>
                                         <div className="col-sm-6">
-                                            <input type="text" className="form-control form-control-sm" id="successText" placeholder="Success!" value={successText} onChange={successTextOnChangeHandler}/>
+                                            <input type="text" className="form-control form-control-sm" id="successText" placeholder="Success" value={successText} onChange={successTextOnChangeHandler}/>
                                         </div>
                                     </div>
                                     <div className="form-group row">
@@ -279,7 +278,7 @@ const InteractivePlayground = () => {
                                     <div className="form-group row">
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">errorText</label>
                                         <div className="col-sm-6">
-                                            <input type="text" className="form-control form-control-sm" id="errorText" placeholder="Error!" value={errorText} onChange={errorTextOnChangeHandler}/>
+                                            <input type="text" className="form-control form-control-sm" id="errorText" placeholder="Error" value={errorText} onChange={errorTextOnChangeHandler}/>
                                         </div>
                                     </div>
                                     <div className="form-group row">

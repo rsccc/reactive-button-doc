@@ -22,9 +22,9 @@
     "docusaurus-plugin-sass": "^0.1.10",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-jsx-parser": "^1.25.1",
+    "react-icons": "^3.11.0",
     "react-live": "^2.2.2",
-    "reactive-button": "^1.1.6",
+    "reactive-button": "file:reactive-button-1.1.10.tgz",
     "styled-components": "^5.2.0"
   },
   "browserslist": {

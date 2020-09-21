@@ -8,9 +8,9 @@ const Example1 = (props) => {
         ref: useRef(),
         color: 'primary',
         idleText: 'Primary',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        loadingText: 'Loading',
+        successText: 'Success',
+        errorText: 'Error',
         buttonState: 'idle',
         endState: 'success',
     });
@@ -19,9 +19,9 @@ const Example1 = (props) => {
         ref: useRef(),
         color: 'dark',
         idleText: 'Dark',
-        loadingText: <span><span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span><span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span><span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        loadingText: 'Loading',
+        successText: 'Success',
+        errorText: 'Error',
         buttonState: 'idle',
         endState: 'success',
     });
@@ -30,9 +30,9 @@ const Example1 = (props) => {
         ref: useRef(),
         color: 'light',
         idleText: 'Light',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        loadingText: 'Loading',
+        successText: 'Success',
+        errorText: 'Error',
         buttonState: 'idle',
         endState: 'success',
     });
@@ -41,9 +41,9 @@ const Example1 = (props) => {
         ref: useRef(),
         color: 'green',
         idleText: 'Green',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        loadingText: 'Loading',
+        successText: 'Success',
+        errorText: 'Error',
         buttonState: 'idle',
         endState: 'success',
     });
@@ -52,9 +52,9 @@ const Example1 = (props) => {
         ref: useRef(),
         color: 'red',
         idleText: 'Red',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        loadingText: 'Loading',
+        successText: 'Success',
+        errorText: 'Error',
         buttonState: 'idle',
         endState: 'success',
     });
@@ -86,6 +86,7 @@ const Example1 = (props) => {
                 {buttons.map((button, index) => (
                     <div className="item" key={index}>
                         <ReactiveButton
+                            rounded={true}
                             buttonRef={button[0].ref}
                             color={button[0].color}
                             idleText={button[0].idleText}
