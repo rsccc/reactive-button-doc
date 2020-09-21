@@ -110,7 +110,7 @@ function Home() {
         <div className="container">
           <div className="text--center">
             <img
-              alt="Docusaurus with Keytar"
+              alt="Reactive Button"
               className={styles.logo}
               src={useBaseUrl('img/logo/logo.svg')}
             />
