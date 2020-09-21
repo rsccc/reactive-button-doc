@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 import ReactiveButton from 'reactive-button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Showcase from '../components/Showcase/Showcase';
+import Playground from '../components/Playground/Playground';
 
 const showcaseCode =  `
 function App() {
@@ -143,7 +143,7 @@ function Home() {
               <div className="row">
                 <div className="col col--12">
                   <div className={styles.exampleComponent__item}>
-                    <Showcase code={showcaseCode} scope={ showcaseScope } height={'250px'}/>
+                    <Playground code={showcaseCode} scope={ showcaseScope } height={'250px'}/>
                   </div>
                 </div>
               </div>

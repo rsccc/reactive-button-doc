@@ -3,7 +3,7 @@ id: playground
 title: Playground
 ---
 
-Let's explore the different options that <span className="keyword">React Button</span> offers.
+Let's explore the different options that <span className="keyword">Reactive Button</span> offers.
 
 
 ## Interactive Playground

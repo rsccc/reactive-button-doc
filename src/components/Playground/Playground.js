@@ -4,7 +4,7 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import useThemeContext from '@theme/hooks/useThemeContext';
 import palenight from 'prism-react-renderer/themes/palenight';
 
-const Showcase = ({ noInline, code, scope, height }) => {
+const Playground = ({ noInline, code, scope, height }) => {
     const {isDarkTheme} = useThemeContext();
 
     const background = '#42374a';
@@ -168,4 +168,4 @@ const Showcase = ({ noInline, code, scope, height }) => {
     )
 };
 
-export default Showcase;
+export default Playground;
