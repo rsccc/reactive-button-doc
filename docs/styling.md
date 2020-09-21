@@ -21,7 +21,7 @@ However, you are free to create your own theme.
 
 ## Custom Theme
 
-Modify the below values how you prefer and use it in your existing css file.
+Modify the values how you prefer and use it in your existing css file.
 
 ```css
 .reactive-btn-wrapper, .reactive-btn {
