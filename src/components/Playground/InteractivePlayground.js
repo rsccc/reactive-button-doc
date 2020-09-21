@@ -22,8 +22,8 @@ const InteractivePlayground = () => {
         messageDuration: 2000,
         block: false,
         disabled: false,
-        width: 0,
-        height: 0,
+        width: '',
+        height: '',
         animation: true
     };
     const [buttonState, setButtonState] = useState(defaultValues.buttonState);
@@ -178,8 +178,8 @@ const InteractivePlayground = () => {
                             messageDuration={messageDuration} 
                             disabled={disabled} 
                             buttonRef={null}
-                            width={width ? `${width}px` : null}
-                            height={height ? `${height}px` : null}
+                            width={width && width !== ''? `${width}px` : null}
+                            height={height && height !== '' ? `${height}px` : null}
                             animation={animation}
                         />
                     </div>
