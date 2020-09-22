@@ -5,7 +5,7 @@ title: Installation
 
 ## Requirements
 
-- [React](https://reactjs.org) version >= 16.8 or above
+- React version >= 16.8 or above
 
 ## Installation
 
