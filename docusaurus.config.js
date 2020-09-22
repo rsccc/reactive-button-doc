@@ -10,6 +10,8 @@ module.exports = {
   scripts: [
   ],
   themeConfig: {
+    image: 'img/logo/logo.png',
+    metadatas: [{name: 'Reactive Button', content: 'A React Button component that thinks like React.'}],
     sidebarCollapsible: false,
     prism: {
       theme: require('prism-react-renderer/themes/palenight'),
@@ -66,6 +68,11 @@ module.exports = {
     },
     footer: {
       style: 'light',
+      /* logo: {
+        alt: 'Reactive Button',
+        src: 'img/logo/logo.svg',
+        href: 'https://arifszn.github.io',
+      }, */
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://arifszn.github.io" target="_blank">Ariful Alam</a>`,
     },
   },

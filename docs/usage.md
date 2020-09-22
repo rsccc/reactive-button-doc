@@ -138,7 +138,7 @@ import Link from '@docusaurus/Link';
    />
 </a>
 ```
-<strong>Note:</strong> For more usage visit <Link to="/docs/Playground#editor-playground">Editor Playground</Link> and change the codes.
+<strong>Note:</strong> For more usage, visit <Link to="/docs/Playground#editor-playground">Editor Playground</Link> and change the codes.
 
 ## Available Props 
 

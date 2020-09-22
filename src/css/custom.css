@@ -598,6 +598,10 @@ html[data-theme=dark] .z-table-wrapper table th {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
+.footer__logo {
+  max-width: 80px;
+}
+
 .fadeIn {
 	opacity: 1;
 	animation-name: fadeIn;
