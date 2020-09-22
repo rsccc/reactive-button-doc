@@ -94,7 +94,51 @@ For non asynchronous task, state management is not needed. Use as like normal bu
 
 import Link from '@docusaurus/Link';
 
-Explore the <Link to="/docs/Playground">Playground</Link> to see the codes take effect.
+## Other Usage
+
+<span classNames="tagLine">Reactive Button</span> has all the functionalities of a normal button.
+
+### Without State
+
+``` jsx
+<ReactiveButton
+   onClick={doSomething}
+   idleText="Some Text"
+/>
+```
+
+### Using Icon
+
+``` jsx
+<ReactiveButton
+   idleText={<span><i className="fa fa-reply"></i>Send</span>}
+/>
+```
+
+### Form Submit
+
+``` jsx
+<form>
+   <input type="text" name="username"/>
+   <input type="password" name="password"/>
+   <ReactiveButton
+      type={'submit'}
+      idleText="Submit"
+   />
+</form>
+```
+
+### Anchor Tag
+
+``` jsx
+//wrap with anchor tag
+<a href="https://github.com/">
+   <ReactiveButton
+      idleText="Visit Github"
+   />
+</a>
+```
+<strong>Note:</strong> For more usage visit <Link to="/docs/Playground#editor-playground">Editor Playground</Link> and change the codes.
 
 ## Available Props 
 
