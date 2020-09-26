@@ -26,7 +26,7 @@ Modify the values how you prefer and use it in your existing css file.
 ```css
 .reactive-btn-wrapper, .reactive-btn {
 	--reactive-button-min-width: 100px !important;
-	--reactive-button-height: 35px !important;
+	--reactive-button-min-height: 35px !important;
 	--reactive-button-font-size: 14px !important;
 	--reactive-button-font-weight: 400 !important;
 	--reactive-button-border-radius: 0px !important;
