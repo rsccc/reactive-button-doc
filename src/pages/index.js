@@ -112,7 +112,7 @@ function Home() {
             <img
               alt="Reactive Button"
               className={styles.logo}
-              src={useBaseUrl('img/logo/logo.svg')}
+              src={useBaseUrl('img/logo/logo.png')}
             />
         </div>
           <h1 className="hero__title"><span className={styles.heroProjectKeywords}>React</span><span className={styles.heroProjectKeywordsSecondary}>ive</span> <span className={styles.heroProjectKeywords}>Button</span></h1>

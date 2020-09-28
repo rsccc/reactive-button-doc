@@ -50,7 +50,7 @@ module.exports = {
       hideOnScroll: false,
       logo: {
         alt: 'Logo',
-        src: 'img/logo/logo.svg',
+        src: 'img/logo/logo.png',
       },
       items: [
         {
@@ -70,7 +70,7 @@ module.exports = {
       style: 'light',
       /* logo: {
         alt: 'Reactive Button',
-        src: 'img/logo/logo.svg',
+        src: 'img/logo/logo.png',
         href: 'https://arifszn.github.io',
       }, */
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://arifszn.github.io" target="_blank">Ariful Alam</a>`,

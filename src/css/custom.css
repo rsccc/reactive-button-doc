@@ -31,7 +31,8 @@
 
 @media screen and (min-width: 966px) {
   ::-webkit-scrollbar, .scroller {
-      width: 8px;
+    width: 8px;
+    height: 8px;
     background-color: #f1f1f1;
   }
 }

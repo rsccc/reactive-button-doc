@@ -6,7 +6,7 @@ title: Styling
 <span className="keyword">Reactive Button</span> provides flexible styling option. Most of the common style changes can be achieved by using the <code>style</code> prop.
 
 import Playground from '../src/components/Playground/Playground'
-import StyleCode from '../src/components/demoCodes/StyleCode'
+import StyleCode from '../src/components/DemoCodes/StyleCode'
 import ReactiveButton from 'reactive-button'
 
 <div className="my-4">
