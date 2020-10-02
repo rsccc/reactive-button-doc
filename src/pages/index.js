@@ -154,7 +154,7 @@ function Home() {
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
-              <div className="row">
+              <div className="row justify-content-center">
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
                 ))}

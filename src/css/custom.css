@@ -182,6 +182,12 @@ html[data-theme=dark] .z-table-wrapper table th {
   justify-content: center !important;
 }
 
+@media (min-width: 768px) {
+  .justify-content-md-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+  }
+}
 
 .m-auto {
   margin: auto !important;
