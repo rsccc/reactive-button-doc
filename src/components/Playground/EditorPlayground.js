@@ -14,7 +14,7 @@ const EditorPlayground = () => {
         const onClickHandler = () => {
             setState('loading');
             setTimeout(() => {
-            setState('success');
+                setState('success');
             }, 2000);
         }
 

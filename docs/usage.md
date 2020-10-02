@@ -52,7 +52,7 @@ function App() {
    const onClickHandler = () => {
       setState('loading');
       setTimeout(() => {
-      setState('success');
+         setState('success');
       }, 2000);
    }
 
@@ -98,16 +98,36 @@ import Link from '@docusaurus/Link';
 
 <span classNames="tagLine">Reactive Button</span> has all the functionalities of a normal button.
 
+### Existing State
+
+In your project, There might be existing state for loading indicator which accepts boolean value only. If you don't want to define new state for Reactive Button, then utilize the existing state.
+
+``` jsx
+   const [loading, setLoading] = useState(false);
+
+   return (
+      <ReactiveButton
+         buttonState={loading ? 'loading' : 'idle'}
+         idleText={'Button'}
+         loadingText={'Loading'}
+      />
+   );
+```
+
 ### Without State
+
+You are not limited to use state always.
 
 ``` jsx
 <ReactiveButton
    onClick={doSomething}
-   idleText="Some Text"
+   idleText={"Some Text"}
 />
 ```
 
 ### Using Icon
+
+You can use your own icons. Don't forget to wrap them with a parent element.
 
 ``` jsx
 <ReactiveButton
@@ -116,6 +136,8 @@ import Link from '@docusaurus/Link';
 ```
 
 ### Form Submit
+
+If you need to submit form by button clicking, set the <code>type</code> prop as '<strong>submit</strong>'. 
 
 ``` jsx
 <form>
@@ -130,8 +152,9 @@ import Link from '@docusaurus/Link';
 
 ### Anchor Tag
 
+To use Reactive button as anchor tag, simply wrap it with an anchor tag.
+
 ``` jsx
-//wrap with anchor tag
 <a href="https://github.com/">
    <ReactiveButton
       idleText="Visit Github"
