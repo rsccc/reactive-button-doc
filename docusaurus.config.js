@@ -18,7 +18,7 @@ module.exports = {
       darkTheme: require('prism-react-renderer/themes/palenight'),
     },
     announcementBar: {
-      id: 'support_us_1', // Any value that will identify this message.
+      id: 'reactive_button_support_us', // Any value that will identify this message.
       content:
         '⭐️ If you like Reactive Button, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reactive-button">GitHub</a>! ⭐️',
       backgroundColor: '#fafbfc', // Defaults to `#fff`.
