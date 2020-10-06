@@ -241,6 +241,7 @@ const InteractivePlayground = () => {
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">size</label>
                                         <div className="col-sm-6">
                                             <select className="form-control form-control-sm" id="size" value={size} onChange={sizeOnChangeHandler}>
+                                                <option value="tiny">tiny</option>
                                                 <option value="small">small</option>
                                                 <option value="normal">normal</option>
                                                 <option value="large">large</option>
@@ -332,9 +333,9 @@ const InteractivePlayground = () => {
                         idleText={'Reset All'}
                         color="dark"
                         height="40px"
+                        rounded
                         disabled={disableButtonStateProp}
                         onClick={resetAll}
-                        style={{borderRadius: '10px'}}
                     />
                 </div>
             </div>
