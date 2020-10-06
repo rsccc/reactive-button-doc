@@ -19,6 +19,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@mdx-js/react": "^1.6.18",
     "clsx": "^1.1.1",
+    "docusaurus-lunr-search": "^2.1.7",
     "docusaurus-plugin-sass": "^0.1.11",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
