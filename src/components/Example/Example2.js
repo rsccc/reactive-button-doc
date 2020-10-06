@@ -6,8 +6,8 @@ import ReactiveButton from 'reactive-button';
 const Example2 = (props) => {
     const [button1, setButton1] = useState({
         ref: useRef(),
-        color: 'primary',
-        idleText: 'Primary',
+        color: 'teal',
+        idleText: 'Teal',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -17,30 +17,8 @@ const Example2 = (props) => {
 
     const [button2, setButton2] = useState({
         ref: useRef(),
-        color: 'dark',
-        idleText: 'Dark',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faThumbsUp}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
-        buttonState: 'idle',
-        endState: 'success',
-    });
-
-    const [button3, setButton3] = useState({
-        ref: useRef(),
-        color: 'light',
-        idleText: 'Light',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faUserCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
-        buttonState: 'idle',
-        endState: 'success',
-    });
-
-    const [button4, setButton4] = useState({
-        ref: useRef(),
-        color: 'green',
-        idleText: 'Green',
+        color: 'blue',
+        idleText: 'Blue',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheckCircle}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -48,12 +26,34 @@ const Example2 = (props) => {
         endState: 'success',
     });
 
-    const [button5, setButton5] = useState({
+    const [button3, setButton3] = useState({
         ref: useRef(),
-        color: 'red',
-        idleText: 'Red',
+        color: 'violet',
+        idleText: 'Violet',
         loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCalendarCheck}/></span> Success</span>,
+        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        buttonState: 'idle',
+        endState: 'success',
+    });
+
+    const [button4, setButton4] = useState({
+        ref: useRef(),
+        color: 'orange',
+        idleText: 'Orange',
+        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
+        successText: <span> <span><FontAwesomeIcon icon={faThumbsUp}/></span> Success</span>,
+        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        buttonState: 'idle',
+        endState: 'success',
+    });
+
+    const [button5, setButton5] = useState({
+        ref: useRef(),
+        color: 'yellow',
+        idleText: 'Yellow',
+        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
+        successText: <span> <span><FontAwesomeIcon icon={faUserCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
         buttonState: 'idle',
         endState: 'success',
@@ -96,7 +96,8 @@ const Example2 = (props) => {
                 {buttons.map((button, index) => (
                     <div className="item" key={index}>
                         <ReactiveButton
-                            outline={true}
+                            rounded={false}
+                            outline
                             buttonRef={button[0].ref}
                             color={button[0].color}
                             idleText={button[0].idleText}

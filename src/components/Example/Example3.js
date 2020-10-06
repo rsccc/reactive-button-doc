@@ -11,8 +11,8 @@ import { ImSpinner9 } from 'react-icons/im';
 const Example3 = (props) => {
     const [button1, setButton1] = useState({
         ref: useRef(),
-        color: 'primary',
-        idleText: 'Primary',
+        color: 'teal',
+        idleText: 'Teal',
         loadingText: 'Loading',
         successText: <span><FontAwesomeIcon icon={faCheck}/> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -22,8 +22,8 @@ const Example3 = (props) => {
 
     const [button2, setButton2] = useState({
         ref: useRef(),
-        color: 'dark',
-        idleText: 'Dark',
+        color: 'blue',
+        idleText: 'Blue',
         loadingText: <span className="center-this"><BiLoader className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -33,8 +33,8 @@ const Example3 = (props) => {
 
     const [button3, setButton3] = useState({
         ref: useRef(),
-        color: 'light',
-        idleText: 'Light',
+        color: 'violet',
+        idleText: 'Violet',
         loadingText: <span className="center-this"><ImSpinner9 className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -44,8 +44,8 @@ const Example3 = (props) => {
 
     const [button4, setButton4] = useState({
         ref: useRef(),
-        color: 'green',
-        idleText: 'Green',
+        color: 'orange',
+        idleText: 'Orange',
         loadingText: <span className="center-this"><SiSpinrilla className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -55,8 +55,8 @@ const Example3 = (props) => {
 
     const [button5, setButton5] = useState({
         ref: useRef(),
-        color: 'red',
-        idleText: 'Red',
+        color: 'yellow',
+        idleText: 'Yellow',
         loadingText: <span className="center-this"><ImSpinner8 className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -101,7 +101,9 @@ const Example3 = (props) => {
                 {buttons.map((button, index) => (
                     <div className="item" key={index}>
                         <ReactiveButton
-                            outline={false}
+                            outline={true}
+                            rounded
+                            shadow
                             buttonRef={button[0].ref}
                             color={button[0].color}
                             idleText={button[0].idleText}

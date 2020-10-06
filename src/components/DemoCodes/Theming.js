@@ -1,4 +1,4 @@
-const StyleCode = 
+const Theming = 
 `<ReactiveButton
     style={
         {
@@ -8,4 +8,4 @@ const StyleCode =
     }
 />`;
 
-export default StyleCode;
+export default Theming;

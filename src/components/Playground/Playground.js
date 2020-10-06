@@ -4,7 +4,7 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import useThemeContext from '@theme/hooks/useThemeContext';
 import palenight from 'prism-react-renderer/themes/palenight';
 
-const Playground = ({ noInline, code, scope, height }) => {
+const Playground = ({ noInline, code, scope, height, previewOnly = false }) => {
     const {isDarkTheme} = useThemeContext();
 
     const background = '#42374a';
@@ -105,9 +105,9 @@ const Playground = ({ noInline, code, scope, height }) => {
     `;
 
     const column = css`
-    flex-basis: 50%;
-    width: 50%;
-    max-width: 50%;
+    flex-basis: ${previewOnly ? '100%' : '50%'};
+    width: ${previewOnly ? '100%' : '50%'};
+    max-width: ${previewOnly ? '100%' : '50%'};
     @media (max-width: 600px) {
         flex-basis: auto;
         width: 100%;
@@ -131,7 +131,7 @@ const Playground = ({ noInline, code, scope, height }) => {
 
     const StyledPreview = styled(LivePreview)`
     position: relative;
-    padding: 0.5rem;
+    padding: 1.5rem;
     background: ${isDarkTheme ? '#232525' : '#e3eaea'};
     color: black;
     height: auto;
@@ -157,12 +157,13 @@ const Playground = ({ noInline, code, scope, height }) => {
     return (
         <StyledProvider code={code} noInline={noInline} theme={palenight} scope={scope}>
             <LiveWrapper>
-                <StyledEditor>
-                    <LiveEditor />
-                </StyledEditor>
+                {!previewOnly &&
+                    <StyledEditor>
+                        <LiveEditor />
+                    </StyledEditor>
+                }
                 <StyledPreview />
             </LiveWrapper>
-
             <StyledError />
         </StyledProvider>
     )

@@ -267,6 +267,11 @@ const InteractivePlayground = () => {
                                                 <option value="light">light</option>
                                                 <option value="green">green</option>
                                                 <option value="red">red</option>
+                                                <option value="yellow">yellow</option>
+                                                <option value="teal">teal</option>
+                                                <option value="violet">violet</option>
+                                                <option value="orange">orange</option>
+                                                <option value="blue">blue</option>
                                             </select>
                                         </div>
                                     </div>

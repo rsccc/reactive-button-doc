@@ -17,28 +17,6 @@ const Example1 = (props) => {
 
     const [button2, setButton2] = useState({
         ref: useRef(),
-        color: 'dark',
-        idleText: 'Dark',
-        loadingText: 'Loading',
-        successText: 'Success',
-        errorText: 'Error',
-        buttonState: 'idle',
-        endState: 'success',
-    });
-
-    const [button3, setButton3] = useState({
-        ref: useRef(),
-        color: 'light',
-        idleText: 'Light',
-        loadingText: 'Loading',
-        successText: 'Success',
-        errorText: 'Error',
-        buttonState: 'idle',
-        endState: 'success',
-    });
-
-    const [button4, setButton4] = useState({
-        ref: useRef(),
         color: 'green',
         idleText: 'Green',
         loadingText: 'Loading',
@@ -48,10 +26,32 @@ const Example1 = (props) => {
         endState: 'success',
     });
 
-    const [button5, setButton5] = useState({
+    const [button3, setButton3] = useState({
         ref: useRef(),
         color: 'red',
         idleText: 'Red',
+        loadingText: 'Loading',
+        successText: 'Success',
+        errorText: 'Error',
+        buttonState: 'idle',
+        endState: 'success',
+    });
+
+    const [button4, setButton4] = useState({
+        ref: useRef(),
+        color: 'dark',
+        idleText: 'Dark',
+        loadingText: 'Loading',
+        successText: 'Success',
+        errorText: 'Error',
+        buttonState: 'idle',
+        endState: 'success',
+    });
+
+    const [button5, setButton5] = useState({
+        ref: useRef(),
+        color: 'light',
+        idleText: 'Light',
         loadingText: 'Loading',
         successText: 'Success',
         errorText: 'Error',
@@ -86,7 +86,6 @@ const Example1 = (props) => {
                 {buttons.map((button, index) => (
                     <div className="item" key={index}>
                         <ReactiveButton
-                            rounded={true}
                             buttonRef={button[0].ref}
                             color={button[0].color}
                             idleText={button[0].idleText}

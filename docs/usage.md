@@ -3,6 +3,16 @@ id: usage
 title: Usage
 ---
 
+import Playground from '../src/components/Playground/Playground'
+import UsingIcons from '../src/components/DemoCodes/UsingIcons'
+import AnchorTag from '../src/components/DemoCodes/AnchorTag'
+import Colors from '../src/components/DemoCodes/Colors'
+import Size from '../src/components/DemoCodes/Size'
+import Style from '../src/components/DemoCodes/Style'
+import ReactiveButton from 'reactive-button'
+import { faReply } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 :::note
 
 Below example demonstrates an asynchronous task. When clicking the button, an asynchronous task (e.g. Data fetch, form submit) will be processed and after processing, a success or error message will be displayed.
@@ -96,7 +106,68 @@ import Link from '@docusaurus/Link';
 
 ## Other Usage
 
-<span classNames="tagLine">Reactive Button</span> has all the functionalities of a normal button.
+Reactive Button has all the functionalities of a normal button.
+
+### Color
+
+Reactive Button comes with 10 default color options.
+
+<div>
+    <Playground
+        code={Colors}
+        scope={{ReactiveButton, FontAwesomeIcon, faReply}}
+        previewOnly={true}
+    />
+</div>
+
+``` jsx
+<ReactiveButton color="primary"/>
+<ReactiveButton color="red"/>
+<ReactiveButton color="dark"/>
+<ReactiveButton color="light"/>
+<ReactiveButton color="teal"/>
+<ReactiveButton color="blue"/>
+<ReactiveButton color="violet"/>
+<ReactiveButton color="orange"/>
+<ReactiveButton color="yellow"/>
+```
+
+### Size
+
+There are 4 sizes available.
+
+<div>
+    <Playground
+        code={Size}
+        scope={{ReactiveButton, FontAwesomeIcon, faReply}}
+        previewOnly={true}
+    />
+</div>
+
+``` jsx
+<ReactiveButton size="tiny"/>
+<ReactiveButton size="small"/>
+<ReactiveButton size="medium"/>
+<ReactiveButton size="large"/>
+```
+
+### Style
+
+Make the buttons more beautiful with these customization options.
+
+<div>
+    <Playground
+        code={Style}
+        scope={{ReactiveButton, FontAwesomeIcon, faReply}}
+        previewOnly={true}
+    />
+</div>
+
+``` jsx
+<ReactiveButton outline/>
+<ReactiveButton rounded/>
+<ReactiveButton shadow/>
+```
 
 ### Existing State
 
@@ -125,13 +196,21 @@ You are not limited to use state always.
 />
 ```
 
-### Using Icon
+### Using Icons
 
 You can use your own icons. Don't forget to wrap them with a parent element.
 
+<div>
+    <Playground
+        code={UsingIcons}
+        scope={{ReactiveButton, FontAwesomeIcon, faReply}}
+        previewOnly={true}
+    />
+</div>
+
 ``` jsx
 <ReactiveButton
-   idleText={<span><i className="fa fa-reply"></i>Send</span>}
+   idleText={<span><FontAwesomeIcon icon={faReply}/> Send</span>}
 />
 ```
 
@@ -154,14 +233,23 @@ If you need to submit form by button clicking, set the <code>type</code> prop as
 
 To use Reactive button as anchor tag, simply wrap it with an anchor tag.
 
+<div>
+    <Playground
+        code={AnchorTag}
+        scope={{ReactiveButton}}
+        previewOnly={true}
+    />
+</div>
+
 ``` jsx
-<a href="https://github.com/">
+<a href="https://github.com/" target="_blank">
    <ReactiveButton
       idleText="Visit Github"
    />
 </a>
 ```
-<strong>Note:</strong> For more usage, visit <Link to="/docs/Playground#editor-playground">Editor Playground</Link> and change the codes.
+
+<strong>Note:</strong> For more usage, visit <Link to="/docs/Playground">Playground</Link>.
 
 ## Available Props 
 

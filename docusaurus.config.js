@@ -11,7 +11,7 @@ module.exports = {
   ],
   themeConfig: {
     image: 'img/logo/logo.png',
-    metadatas: [{name: 'Reactive Button', content: 'A React Button component that thinks like React.'}],
+    metadatas: [{name: 'Reactive Button', content: 'A React Button component that thinks like React'}],
     sidebarCollapsible: false,
     prism: {
       theme: require('prism-react-renderer/themes/palenight'),
