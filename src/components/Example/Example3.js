@@ -11,8 +11,8 @@ import { ImSpinner9 } from 'react-icons/im';
 const Example3 = (props) => {
     const [button1, setButton1] = useState({
         ref: useRef(),
-        color: 'teal',
-        idleText: 'Teal',
+        color: 'violet',
+        idleText: 'Violet',
         loadingText: 'Loading',
         successText: <span><FontAwesomeIcon icon={faCheck}/> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -33,8 +33,8 @@ const Example3 = (props) => {
 
     const [button3, setButton3] = useState({
         ref: useRef(),
-        color: 'violet',
-        idleText: 'Violet',
+        color: 'yellow',
+        idleText: 'Yellow',
         loadingText: <span className="center-this"><ImSpinner9 className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -44,8 +44,8 @@ const Example3 = (props) => {
 
     const [button4, setButton4] = useState({
         ref: useRef(),
-        color: 'orange',
-        idleText: 'Orange',
+        color: 'dark',
+        idleText: 'Dark',
         loadingText: <span className="center-this"><SiSpinrilla className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
@@ -55,8 +55,8 @@ const Example3 = (props) => {
 
     const [button5, setButton5] = useState({
         ref: useRef(),
-        color: 'yellow',
-        idleText: 'Yellow',
+        color: 'light',
+        idleText: 'Light',
         loadingText: <span className="center-this"><ImSpinner8 className="icon-spin mr-1"/> Loading</span>,
         successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
         errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,

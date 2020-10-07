@@ -17,8 +17,8 @@ const Example1 = (props) => {
 
     const [button2, setButton2] = useState({
         ref: useRef(),
-        color: 'green',
-        idleText: 'Green',
+        color: 'secondary',
+        idleText: 'Secondary',
         loadingText: 'Loading',
         successText: 'Success',
         errorText: 'Error',
@@ -28,8 +28,8 @@ const Example1 = (props) => {
 
     const [button3, setButton3] = useState({
         ref: useRef(),
-        color: 'red',
-        idleText: 'Red',
+        color: 'teal',
+        idleText: 'Teal',
         loadingText: 'Loading',
         successText: 'Success',
         errorText: 'Error',
@@ -39,8 +39,8 @@ const Example1 = (props) => {
 
     const [button4, setButton4] = useState({
         ref: useRef(),
-        color: 'dark',
-        idleText: 'Dark',
+        color: 'green',
+        idleText: 'Green',
         loadingText: 'Loading',
         successText: 'Success',
         errorText: 'Error',
@@ -50,8 +50,8 @@ const Example1 = (props) => {
 
     const [button5, setButton5] = useState({
         ref: useRef(),
-        color: 'light',
-        idleText: 'Light',
+        color: 'red',
+        idleText: 'Red',
         loadingText: 'Loading',
         successText: 'Success',
         errorText: 'Error',

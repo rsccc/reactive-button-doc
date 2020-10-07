@@ -122,14 +122,15 @@ Reactive Button comes with 10 default color options.
 
 ``` jsx
 <ReactiveButton color="primary"/>
+<ReactiveButton color="secondary"/>
+<ReactiveButton color="teal"/>
+<ReactiveButton color="green"/>
 <ReactiveButton color="red"/>
+<ReactiveButton color="violet"/>
+<ReactiveButton color="blue"/>
+<ReactiveButton color="yellow"/>
 <ReactiveButton color="dark"/>
 <ReactiveButton color="light"/>
-<ReactiveButton color="teal"/>
-<ReactiveButton color="blue"/>
-<ReactiveButton color="violet"/>
-<ReactiveButton color="orange"/>
-<ReactiveButton color="yellow"/>
 ```
 
 ### Size
@@ -174,15 +175,15 @@ Make the buttons more beautiful with these customization options.
 In your project, There might be existing state for loading indicator which accepts boolean value only. If you don't want to define new state for Reactive Button, then utilize the existing state.
 
 ``` jsx
-   const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
 
-   return (
-      <ReactiveButton
-         buttonState={loading ? 'loading' : 'idle'}
-         idleText={'Button'}
-         loadingText={'Loading'}
-      />
-   );
+return (
+   <ReactiveButton
+      buttonState={loading ? 'loading' : 'idle'}
+      idleText={'Button'}
+      loadingText={'Loading'}
+   />
+);
 ```
 
 ### Without State
@@ -243,9 +244,7 @@ To use Reactive button as anchor tag, simply wrap it with an anchor tag.
 
 ``` jsx
 <a href="https://github.com/" target="_blank">
-   <ReactiveButton
-      idleText="Visit Github"
-   />
+   <ReactiveButton idleText="Visit Github" />
 </a>
 ```
 

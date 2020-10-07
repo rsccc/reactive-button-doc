@@ -263,6 +263,7 @@ const InteractivePlayground = () => {
                                         <div className="col-sm-6">
                                             <select className="form-control form-control-sm" id="color" value={color} onChange={colorOnChangeHandler}>
                                                 <option value="primary">primary</option>
+                                                <option value="secondary">Secondary</option>
                                                 <option value="dark">dark</option>
                                                 <option value="light">light</option>
                                                 <option value="green">green</option>
@@ -270,7 +271,6 @@ const InteractivePlayground = () => {
                                                 <option value="yellow">yellow</option>
                                                 <option value="teal">teal</option>
                                                 <option value="violet">violet</option>
-                                                <option value="orange">orange</option>
                                                 <option value="blue">blue</option>
                                             </select>
                                         </div>

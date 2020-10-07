@@ -6,11 +6,11 @@ import ReactiveButton from 'reactive-button';
 const Example2 = (props) => {
     const [button1, setButton1] = useState({
         ref: useRef(),
-        color: 'teal',
-        idleText: 'Teal',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        color: 'violet',
+        idleText: 'Violet',
+        loadingText: <span><FontAwesomeIcon icon={faSpinner} spin/> Loading</span>,
+        successText: <span><FontAwesomeIcon icon={faCheck}/> Success</span>,
+        errorText: <span><FontAwesomeIcon icon={faTimes}/> Error</span>,
         buttonState: 'idle',
         endState: 'success',
     });
@@ -19,42 +19,42 @@ const Example2 = (props) => {
         ref: useRef(),
         color: 'blue',
         idleText: 'Blue',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCheckCircle}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        loadingText: <span><FontAwesomeIcon icon={faSpinner} spin/> Loading</span>,
+        successText: <span><FontAwesomeIcon icon={faCheckCircle}/> Success</span>,
+        errorText: <span><FontAwesomeIcon icon={faTimes}/> Error</span>,
         buttonState: 'idle',
         endState: 'success',
     });
 
     const [button3, setButton3] = useState({
         ref: useRef(),
-        color: 'violet',
-        idleText: 'Violet',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faCalendarCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        color: 'yellow',
+        idleText: 'Yellow',
+        loadingText: <span><FontAwesomeIcon icon={faSpinner} spin/> Loading</span>,
+        successText: <span><FontAwesomeIcon icon={faCalendarCheck}/> Success</span>,
+        errorText: <span><FontAwesomeIcon icon={faTimes}/> Error</span>,
         buttonState: 'idle',
         endState: 'success',
     });
 
     const [button4, setButton4] = useState({
         ref: useRef(),
-        color: 'orange',
-        idleText: 'Orange',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faThumbsUp}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        color: 'dark',
+        idleText: 'Dark',
+        loadingText: <span><FontAwesomeIcon icon={faSpinner} spin/> Loading</span>,
+        successText: <span><FontAwesomeIcon icon={faThumbsUp}/> Success</span>,
+        errorText: <span><FontAwesomeIcon icon={faTimes}/> Error</span>,
         buttonState: 'idle',
         endState: 'success',
     });
 
     const [button5, setButton5] = useState({
         ref: useRef(),
-        color: 'yellow',
-        idleText: 'Yellow',
-        loadingText: <span> <span><FontAwesomeIcon icon={faSpinner} spin/></span> Loading</span>,
-        successText: <span> <span><FontAwesomeIcon icon={faUserCheck}/></span> Success</span>,
-        errorText: <span> <span><FontAwesomeIcon icon={faTimes}/></span> Error</span>,
+        color: 'light',
+        idleText: 'Light',
+        loadingText: <span><FontAwesomeIcon icon={faSpinner} spin/> Loading</span>,
+        successText: <span><FontAwesomeIcon icon={faUserCheck}/> Success</span>,
+        errorText: <span><FontAwesomeIcon icon={faTimes}/> Error</span>,
         buttonState: 'idle',
         endState: 'success',
     });
@@ -96,8 +96,7 @@ const Example2 = (props) => {
                 {buttons.map((button, index) => (
                     <div className="item" key={index}>
                         <ReactiveButton
-                            rounded={false}
-                            outline
+                            rounded={true}
                             buttonRef={button[0].ref}
                             color={button[0].color}
                             idleText={button[0].idleText}
