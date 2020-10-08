@@ -17,6 +17,11 @@ module.exports = {
       theme: require('prism-react-renderer/themes/palenight'),
       darkTheme: require('prism-react-renderer/themes/palenight'),
     },
+    algolia: {
+      apiKey: '53f9195204712e0120d04dea090406f2',
+      indexName: 'reactive-button',
+      // Options...
+    },
     announcementBar: {
       id: 'reactive_button_support_us', // Any value that will identify this message.
       content:
@@ -97,7 +102,6 @@ module.exports = {
     ],
   ],
   plugins: [
-    'docusaurus-plugin-sass',
-    require.resolve('docusaurus-lunr-search')
+    'docusaurus-plugin-sass'
   ],
 };
