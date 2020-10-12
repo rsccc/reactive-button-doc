@@ -40,4 +40,4 @@ Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arif
 ## License
 
 <p>MIT Licensed.</p>
-<p>Copyright © <a href="https://arifszn.github.io" target="_blank">MD. Ariful Alam</a> {new Date().getFullYear()}.</p>
+<p>Copyright © <a href="https://arifszn.github.io" target="_blank">Ariful Alam</a> {new Date().getFullYear()}.</p>
