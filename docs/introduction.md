@@ -1,6 +1,6 @@
 ---
 id: introduction
-title: Reactive Button
+title: Introduction
 sidebar_label: Introduction
 slug: /
 ---

@@ -104,7 +104,6 @@ function Home() {
 
   return (
     <Layout
-      title={`${siteConfig.title}`}
       description={`${siteConfig.tagline}`}>
       <header className={clsx('hero ', styles.heroBanner)}>
         <div className="container">
