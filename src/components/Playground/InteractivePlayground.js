@@ -309,7 +309,7 @@ const InteractivePlayground = () => {
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">width</label>
                                         <div className="col-sm-6">
                                             <div className="input-group">
-                                                <input type="number" className="form-control" id="width" value={width} onChange={widthOnChangeHandler} placeholder="null"/>
+                                                <input type="number" className="form-control" id="width" value={width} onChange={widthOnChangeHandler} placeholder=""/>
                                                 <div className="input-group-prepend">
                                                     <span className="input-group-text">px</span>
                                                 </div>
@@ -320,7 +320,7 @@ const InteractivePlayground = () => {
                                         <label htmlFor="buttonState" className="col-sm-5 col-form-label text-lg-right">height</label>
                                         <div className="col-sm-6">
                                             <div className="input-group">
-                                                <input type="number" className="form-control" id="height" value={height} onChange={heightOnChangeHandler} placeholder="null"/>
+                                                <input type="number" className="form-control" id="height" value={height} onChange={heightOnChangeHandler} placeholder=""/>
                                                 <div className="input-group-prepend">
                                                     <span className="input-group-text">px</span>
                                                 </div>
