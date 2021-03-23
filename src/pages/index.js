@@ -9,7 +9,6 @@ import ReactiveButton from 'reactive-button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Playground from '../components/Playground/Playground';
-import iziToast from 'izitoast';
 import 'iziToast/dist/css/iziToast.css';
 
 const showcaseCode =  `
@@ -94,6 +93,7 @@ function Feature({title, description}) {
   );
 }
 
+
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
@@ -103,15 +103,19 @@ function Home() {
   useEffect(() => {
     setShowGetStartedButton(true);
 
-    iziToast.show({
-        timeout: 0,
-        progressBar: false,
-        displayMode: 'once',
-        theme: 'light',
-        id: 'star-notification',
-        title: '<a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reactive-button"><img src="https://img.shields.io/github/stars/arifszn/reactive-button?style=social" alt="Github Star"/></a>',
-        message: 'We need your support. Please ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reactive-button">GitHub</a> to help us increase.'
-    });
+    if (typeof window !== "undefined") {
+        const iziToast = require('izitoast');
+
+        iziToast.show({
+            timeout: 0,
+            progressBar: false,
+            displayMode: 'once',
+            theme: 'light',
+            id: 'star-notification',
+            title: '<a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reactive-button"><img src="https://img.shields.io/github/stars/arifszn/reactive-button?style=social" alt="Github Star"/></a>',
+            message: 'We need your support. Please ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reactive-button">GitHub</a> to help us increase.'
+        });
+    }
   }, []);
 
   return (
