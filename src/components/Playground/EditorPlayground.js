@@ -24,18 +24,26 @@ const EditorPlayground = () => {
                 onClick={onClickHandler}
                 color={'primary'}
                 idleText={'Click Me'}
-                loadingText={<React.Fragment>
-                                <FontAwesomeIcon icon={faCircleNotch} spin/> Loading
-                            </React.Fragment>}
-                successText={<React.Fragment>
-                                <FontAwesomeIcon icon={faThumbsUp}/> Success
-                            </React.Fragment>}
-                errorText={<React.Fragment>
-                                <FontAwesomeIcon icon={faBomb}/> Error
-                            </React.Fragment>}
+                loadingText={
+                    <React.Fragment>
+                        <FontAwesomeIcon icon={faCircleNotch} spin/> Loading
+                    </React.Fragment>
+                }
+                successText={
+                    <React.Fragment>
+                        <FontAwesomeIcon icon={faThumbsUp}/> Success
+                    </React.Fragment>
+                }
+                errorText={
+                    <React.Fragment>
+                        <FontAwesomeIcon icon={faBomb}/> Error
+                    </React.Fragment>
+                }
                 type={'button'}
                 className={'class1 class2'}
-                style={{ borderRadius: '5px' }}
+                style={{ 
+                    borderRadius: '5px'
+                }}
                 outline={false}
                 shadow={false}
                 rounded={false}

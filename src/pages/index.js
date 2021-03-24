@@ -34,11 +34,19 @@ function App() {
 const showcaseScope = { ReactiveButton, useState };
 
 const features = [
-  {
-    title: 'Reactive',
+   {
+    title: 'Progress Indicator',
     description: (
       <>
-        Replacing traditional button with reactive behavior.
+        Don't just click button. See what is happening behind your button click.
+      </>
+    ),
+  },
+  {
+    title: 'Animated',
+    description: (
+      <>
+        The 3D animated buttons replace the traditional buttons with reactive behavior.
       </>
     ),
   },
@@ -74,14 +82,6 @@ const features = [
       </>
     ),
   },
-  {
-    title: 'Progress Indicator',
-    description: (
-      <>
-        Don't just click button. See what is happening behind your button click.
-      </>
-    ),
-  },
 ];
 
 function Feature({title, description}) {
@@ -101,6 +101,7 @@ function Home() {
   const [showGetStartedButton, setShowGetStartedButton] = useState(false);
 
   useEffect(() => {
+    
     setShowGetStartedButton(true);
 
     if (typeof window !== "undefined") {
@@ -111,7 +112,7 @@ function Home() {
             progressBar: false,
             displayMode: 'once',
             theme: 'light',
-            id: 'star-notification',
+            id: 'starNotification',
             title: '<a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reactive-button"><img src="https://img.shields.io/github/stars/arifszn/reactive-button?style=social" alt="Github Star"/></a>',
             message: 'We need your support. Please ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/reactive-button">GitHub</a> to help us increase.'
         });
@@ -120,7 +121,9 @@ function Home() {
 
   return (
     <Layout
-      description={`${siteConfig.tagline}`}>
+      title={siteConfig.title}
+      description={`${siteConfig.tagline}`}
+    >
       <header className={clsx('hero ', styles.heroBanner)}>
         <div className="container">
           <div className="text--center">
@@ -141,7 +144,6 @@ function Home() {
               to={useBaseUrl('docs/')}>
               <ReactiveButton
                 style={{ display: showGetStartedButton ? 'block' : 'none' }}
-                color={'dark'}
                 size={"large"}
                 idleText={<span>Get Started &nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight}/></span>}
                 width={'170px'}

@@ -41,7 +41,9 @@ const InteractivePlayground = () => {
     const [height, setHeight] = useState(defaultValues.height);
     const [animation, setAnimation] = useState(defaultValues.animation);
 
+    const [resetButtonState, setResetButtonState] = useState('idle');
     const [disableButtonStateProp, setDisableButtonStateProp] = useState(false);
+
 
  
     const buttonOnClickHandler = () => {
@@ -134,23 +136,29 @@ const InteractivePlayground = () => {
     }
 
     const resetAll = () => {
-        setButtonState(defaultValues.buttonState);
-        setColor(defaultValues.buttonState);
-        setIdleText(defaultValues.idleText);
-        setLoadingText(defaultValues.loadingText);
-        setSuccessText(defaultValues.successText);
-        setErrorText(defaultValues.errorText);
-        setClassName(defaultValues.className);
-        setSize(defaultValues.size);
-        setShadow(defaultValues.shadow);
-        setRounded(defaultValues.rounded);
-        setOutline(defaultValues.outline);
-        setBlock(defaultValues.block);
-        setMessageDuration(defaultValues.messageDuration);
-        setDisabled(defaultValues.disabled);
-        setWidth(defaultValues.width);
-        setHeight(defaultValues.height);
-        setAnimation(defaultValues.animation);
+        setResetButtonState('loading');
+
+        setTimeout(() => {
+            setButtonState(defaultValues.buttonState);
+            setColor(defaultValues.buttonState);
+            setIdleText(defaultValues.idleText);
+            setLoadingText(defaultValues.loadingText);
+            setSuccessText(defaultValues.successText);
+            setErrorText(defaultValues.errorText);
+            setClassName(defaultValues.className);
+            setSize(defaultValues.size);
+            setShadow(defaultValues.shadow);
+            setRounded(defaultValues.rounded);
+            setOutline(defaultValues.outline);
+            setBlock(defaultValues.block);
+            setMessageDuration(defaultValues.messageDuration);
+            setDisabled(defaultValues.disabled);
+            setWidth(defaultValues.width);
+            setHeight(defaultValues.height);
+            setAnimation(defaultValues.animation);
+            
+            setResetButtonState('success');
+        }, 1000);
     }
     
     return (
@@ -334,11 +342,14 @@ const InteractivePlayground = () => {
                 </div>
                 <div className="card__footer text-center my-2">
                     <ReactiveButton
+                        buttonState={resetButtonState}
                         size="large"
                         idleText={'Reset All'}
+                        loadingText={'Resetting...'}
+                        successText={'Done!'}
                         color="dark"
                         height="40px"
-                        rounded
+                        outline
                         disabled={disableButtonStateProp}
                         onClick={resetAll}
                     />

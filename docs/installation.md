@@ -11,7 +11,7 @@ title: Installation
 
 Install via <a href="https://www.npmjs.com/package/reactive-button">NPM</a>
 ```sh
-npm install --save reactive-button
+npm install reactive-button
 ```
 
 Install via <a href="https://yarnpkg.com/package/reactive-button">Yarn</a>

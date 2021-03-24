@@ -163,7 +163,7 @@ const Playground = ({ noInline, code, scope, height, previewOnly = false }) => {
                         <LiveEditor />
                     </StyledEditor>
                 }
-                <StyledPreview isDarkTheme={isDarkTheme}/>
+                <StyledPreview previewOnly={previewOnly} height={height} isDarkTheme={isDarkTheme}/>
             </LiveWrapper>
             <StyledError />
         </StyledProvider>

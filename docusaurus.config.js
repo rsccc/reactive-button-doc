@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Reactive Button',
-  tagline: 'A React Button component that thinks like React.',
+  tagline: '3D animated react button component with progress bar.',
   url: 'https://arifszn.github.io',
   baseUrl: '/reactive-button/',
   onBrokenLinks: 'throw',
@@ -11,7 +11,7 @@ module.exports = {
   ],
   themeConfig: {
     image: 'img/logo/logo.png',
-    metadatas: [{name: 'Reactive Button', content: 'A React Button component that thinks like React'}],
+    metadatas: [{name: 'Reactive Button', content: '3D animated react button component with progress bar'}],
     sidebarCollapsible: false,
     prism: {
       theme: require('prism-react-renderer/themes/palenight'),

@@ -13,7 +13,7 @@ slug: /
     <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-informational" alt="Author arifszn"/></a>
 </p> -->
 
-<span className="keyword">Reactive Button</span> is a beautiful react component to replace the traditional boring buttons. Comes with customization on top. The goal is to let the users visualize what is happening after a button click.
+<span className="keyword">Reactive Button</span> is a beautiful 3D animated react component to replace the traditional boring buttons. Comes with progress bar and the goal is to let the users visualize what is happening after a button click.
 
 ## Example
 
@@ -23,8 +23,9 @@ import Example from '../src/components/Example/Example';
 
 ## Features
 
-* Reactive
+* 3D
 * Animated
+* Progress indicator
 * Lightweight <small><code><20KB</code></small>
 * Supports icons
 * Zero dependency 
